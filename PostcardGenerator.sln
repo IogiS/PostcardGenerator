@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostcardGenerator", "PostcardGenerator\PostcardGenerator.csproj", "{A14D1A7A-931D-4CD2-9D91-5CB4AC595BCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A14D1A7A-931D-4CD2-9D91-5CB4AC595BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14D1A7A-931D-4CD2-9D91-5CB4AC595BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14D1A7A-931D-4CD2-9D91-5CB4AC595BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14D1A7A-931D-4CD2-9D91-5CB4AC595BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7812F35F-E4E1-42BD-B4FB-C76BAA6E0B58}
+	EndGlobalSection
+EndGlobal

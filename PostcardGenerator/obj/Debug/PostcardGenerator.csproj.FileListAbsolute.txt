@@ -1,0 +1,9 @@
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\bin\Debug\PostcardGenerator.exe.config
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\bin\Debug\PostcardGenerator.exe
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\bin\Debug\PostcardGenerator.pdb
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.csprojAssemblyReference.cache
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.Generator.resources
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.Properties.Resources.resources
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.csproj.GenerateResource.cache
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.exe
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.pdb
