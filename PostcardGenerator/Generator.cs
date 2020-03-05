@@ -18,7 +18,7 @@ namespace PostcardGenerator
         public Generator()
         {
             InitializeComponent();
-            Templates.panels = new List<Panel>() { panel1, panel2, panel3, panel4, panel5 };
+            Templates.panels = new List<Panel>() { templatePanel1, templatePanel2, templatePanel3, templatePanel4, templatePanel5 };
         }
 
         private void Form1_Load(object sender, EventArgs e) => Templates.Load();
@@ -27,15 +27,18 @@ namespace PostcardGenerator
 
         private void panel_DoubleClick(object sender, EventArgs e)
         {
-            for (int i = 0; i < Templates.images.Count; i++)
-            {
-                if (Templates.panels[i].Name == ((Panel)sender).Name)
-                {
-                    postcardPanel.BackgroundImage = Templates.panels[i].BackgroundImage;
-                }
-                
-            }
+            Templates.ApplyTemplate(sender, postcardPanel);
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_DoubleClick(object sender, EventArgs e)
+        {
+            label1.Visible = false;
         }
     }
 }

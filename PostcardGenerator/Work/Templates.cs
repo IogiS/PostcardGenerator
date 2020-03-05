@@ -24,5 +24,18 @@ namespace PostcardGenerator
                 panels[i].BackgroundImage = images[i];
             }
         }
+
+        public static void ApplyTemplate(object sender,Panel postcardPanel)
+        {
+            for (int i = 0; i < images.Count; i++)
+            {
+                if (panels[i].Name == ((Panel)sender).Name)
+                {
+                    postcardPanel.BackgroundImage = panels[i].BackgroundImage;
+                    
+                }
+
+            }
+        }
     }
 }
