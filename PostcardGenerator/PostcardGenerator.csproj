@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Work\Elements.cs" />
+    <Compile Include="Work\Events.cs" />
+    <Compile Include="Work\MusicSettings.cs" />
+    <Compile Include="Work\PictureSettings.cs" />
     <Compile Include="Work\Saving.cs" />
     <Compile Include="Generator.cs">
       <SubType>Form</SubType>

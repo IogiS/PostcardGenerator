@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.postcardPanel = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.bottomRightPanel = new System.Windows.Forms.Panel();
+            this.centerRightPanel = new System.Windows.Forms.Panel();
+            this.midleCenterPanel = new System.Windows.Forms.Panel();
+            this.bottomCenterPanel = new System.Windows.Forms.Panel();
+            this.bottomLeftPanel = new System.Windows.Forms.Panel();
+            this.midleLeftPanel = new System.Windows.Forms.Panel();
+            this.topRightPanel = new System.Windows.Forms.Panel();
+            this.topLeftPanel = new System.Windows.Forms.Panel();
             this.topCenterPanel = new System.Windows.Forms.Panel();
             this.componentsPanel = new System.Windows.Forms.Panel();
-            this.elementsPanel3 = new System.Windows.Forms.Panel();
-            this.elementsPanel2 = new System.Windows.Forms.Panel();
-            this.elementsPanel1 = new System.Windows.Forms.Panel();
+            this.picturePanel = new System.Windows.Forms.Panel();
+            this.textPanel = new System.Windows.Forms.Panel();
+            this.elementsTextLabel = new System.Windows.Forms.Label();
+            this.musicPanel = new System.Windows.Forms.Panel();
+            this.elementsMusicLabel = new System.Windows.Forms.Label();
+            this.elementsPicLabel = new System.Windows.Forms.Label();
             this.postcardTemplatePanel = new System.Windows.Forms.Panel();
             this.templatePanel5 = new System.Windows.Forms.Panel();
             this.templatePanel4 = new System.Windows.Forms.Panel();
@@ -53,14 +56,11 @@
             this.postcardLabel = new System.Windows.Forms.Label();
             this.postcardElementsLabel = new System.Windows.Forms.Label();
             this.templatePostcardLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.postcardPanel.SuspendLayout();
             this.componentsPanel.SuspendLayout();
-            this.elementsPanel3.SuspendLayout();
-            this.elementsPanel2.SuspendLayout();
-            this.elementsPanel1.SuspendLayout();
+            this.picturePanel.SuspendLayout();
+            this.textPanel.SuspendLayout();
+            this.musicPanel.SuspendLayout();
             this.postcardTemplatePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,141 +68,190 @@
             // 
             this.postcardPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.postcardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.postcardPanel.Controls.Add(this.panel8);
-            this.postcardPanel.Controls.Add(this.panel7);
-            this.postcardPanel.Controls.Add(this.panel6);
-            this.postcardPanel.Controls.Add(this.panel5);
-            this.postcardPanel.Controls.Add(this.panel4);
-            this.postcardPanel.Controls.Add(this.panel3);
-            this.postcardPanel.Controls.Add(this.panel2);
-            this.postcardPanel.Controls.Add(this.panel1);
+            this.postcardPanel.Controls.Add(this.bottomRightPanel);
+            this.postcardPanel.Controls.Add(this.centerRightPanel);
+            this.postcardPanel.Controls.Add(this.midleCenterPanel);
+            this.postcardPanel.Controls.Add(this.bottomCenterPanel);
+            this.postcardPanel.Controls.Add(this.bottomLeftPanel);
+            this.postcardPanel.Controls.Add(this.midleLeftPanel);
+            this.postcardPanel.Controls.Add(this.topRightPanel);
+            this.postcardPanel.Controls.Add(this.topLeftPanel);
             this.postcardPanel.Controls.Add(this.topCenterPanel);
             this.postcardPanel.Location = new System.Drawing.Point(12, 97);
             this.postcardPanel.Name = "postcardPanel";
             this.postcardPanel.Size = new System.Drawing.Size(808, 457);
             this.postcardPanel.TabIndex = 0;
             // 
-            // panel8
+            // bottomRightPanel
             // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(594, 356);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 79);
-            this.panel8.TabIndex = 2;
+            this.bottomRightPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bottomRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomRightPanel.Location = new System.Drawing.Point(543, 308);
+            this.bottomRightPanel.Name = "bottomRightPanel";
+            this.bottomRightPanel.Size = new System.Drawing.Size(260, 144);
+            this.bottomRightPanel.TabIndex = 2;
+            this.bottomRightPanel.Visible = false;
             // 
-            // panel7
+            // centerRightPanel
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Location = new System.Drawing.Point(594, 190);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 79);
-            this.panel7.TabIndex = 2;
+            this.centerRightPanel.BackColor = System.Drawing.Color.Transparent;
+            this.centerRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.centerRightPanel.Location = new System.Drawing.Point(543, 153);
+            this.centerRightPanel.Name = "centerRightPanel";
+            this.centerRightPanel.Size = new System.Drawing.Size(260, 144);
+            this.centerRightPanel.TabIndex = 2;
+            this.centerRightPanel.Visible = false;
             // 
-            // panel6
+            // midleCenterPanel
             // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(313, 190);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 79);
-            this.panel6.TabIndex = 2;
+            this.midleCenterPanel.BackColor = System.Drawing.Color.Transparent;
+            this.midleCenterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.midleCenterPanel.Location = new System.Drawing.Point(273, 153);
+            this.midleCenterPanel.Name = "midleCenterPanel";
+            this.midleCenterPanel.Size = new System.Drawing.Size(260, 144);
+            this.midleCenterPanel.TabIndex = 2;
+            this.midleCenterPanel.Visible = false;
             // 
-            // panel5
+            // bottomCenterPanel
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(313, 356);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 79);
-            this.panel5.TabIndex = 2;
+            this.bottomCenterPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bottomCenterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomCenterPanel.Location = new System.Drawing.Point(273, 308);
+            this.bottomCenterPanel.Name = "bottomCenterPanel";
+            this.bottomCenterPanel.Size = new System.Drawing.Size(260, 144);
+            this.bottomCenterPanel.TabIndex = 2;
+            this.bottomCenterPanel.Visible = false;
             // 
-            // panel4
+            // bottomLeftPanel
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(12, 356);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 79);
-            this.panel4.TabIndex = 2;
+            this.bottomLeftPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bottomLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomLeftPanel.Location = new System.Drawing.Point(3, 308);
+            this.bottomLeftPanel.Name = "bottomLeftPanel";
+            this.bottomLeftPanel.Size = new System.Drawing.Size(260, 144);
+            this.bottomLeftPanel.TabIndex = 2;
+            this.bottomLeftPanel.Visible = false;
             // 
-            // panel3
+            // midleLeftPanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(12, 190);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 79);
-            this.panel3.TabIndex = 2;
+            this.midleLeftPanel.BackColor = System.Drawing.Color.Transparent;
+            this.midleLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.midleLeftPanel.Location = new System.Drawing.Point(3, 153);
+            this.midleLeftPanel.Name = "midleLeftPanel";
+            this.midleLeftPanel.Size = new System.Drawing.Size(260, 144);
+            this.midleLeftPanel.TabIndex = 2;
+            this.midleLeftPanel.Visible = false;
             // 
-            // panel2
+            // topRightPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(594, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 79);
-            this.panel2.TabIndex = 1;
+            this.topRightPanel.BackColor = System.Drawing.Color.Transparent;
+            this.topRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.topRightPanel.Location = new System.Drawing.Point(543, 3);
+            this.topRightPanel.Name = "topRightPanel";
+            this.topRightPanel.Size = new System.Drawing.Size(260, 144);
+            this.topRightPanel.TabIndex = 1;
+            this.topRightPanel.Visible = false;
             // 
-            // panel1
+            // topLeftPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(12, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 79);
-            this.panel1.TabIndex = 1;
+            this.topLeftPanel.BackColor = System.Drawing.Color.Transparent;
+            this.topLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.topLeftPanel.Location = new System.Drawing.Point(3, 3);
+            this.topLeftPanel.Name = "topLeftPanel";
+            this.topLeftPanel.Size = new System.Drawing.Size(260, 144);
+            this.topLeftPanel.TabIndex = 1;
+            this.topLeftPanel.Visible = false;
             // 
             // topCenterPanel
             // 
             this.topCenterPanel.BackColor = System.Drawing.Color.Transparent;
             this.topCenterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.topCenterPanel.Location = new System.Drawing.Point(313, 17);
+            this.topCenterPanel.Location = new System.Drawing.Point(273, 3);
             this.topCenterPanel.Name = "topCenterPanel";
-            this.topCenterPanel.Size = new System.Drawing.Size(200, 79);
+            this.topCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.topCenterPanel.TabIndex = 0;
+            this.topCenterPanel.Visible = false;
             // 
             // componentsPanel
             // 
             this.componentsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.componentsPanel.Controls.Add(this.elementsPanel3);
-            this.componentsPanel.Controls.Add(this.elementsPanel2);
-            this.componentsPanel.Controls.Add(this.elementsPanel1);
+            this.componentsPanel.Controls.Add(this.picturePanel);
+            this.componentsPanel.Controls.Add(this.textPanel);
+            this.componentsPanel.Controls.Add(this.musicPanel);
             this.componentsPanel.Location = new System.Drawing.Point(826, 97);
             this.componentsPanel.Name = "componentsPanel";
             this.componentsPanel.Size = new System.Drawing.Size(233, 457);
             this.componentsPanel.TabIndex = 1;
             // 
-            // elementsPanel3
+            // picturePanel
             // 
-            this.elementsPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.elementsPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.elementsPanel3.Controls.Add(this.label1);
-            this.elementsPanel3.Location = new System.Drawing.Point(20, 324);
-            this.elementsPanel3.Name = "elementsPanel3";
-            this.elementsPanel3.Size = new System.Drawing.Size(200, 100);
-            this.elementsPanel3.TabIndex = 3;
+            this.picturePanel.AllowDrop = true;
+            this.picturePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picturePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picturePanel.Controls.Add(this.elementsPicLabel);
+            this.picturePanel.Location = new System.Drawing.Point(22, 19);
+            this.picturePanel.Name = "picturePanel";
+            this.picturePanel.Size = new System.Drawing.Size(200, 100);
+            this.picturePanel.TabIndex = 1;
+            this.picturePanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragDrop);
+            this.picturePanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragEnter);
+            this.picturePanel.DragLeave += new System.EventHandler(this.elementsPanel1_DragLeave);
             // 
-            // elementsPanel2
+            // textPanel
             // 
-            this.elementsPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.elementsPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.elementsPanel2.Controls.Add(this.label3);
-            this.elementsPanel2.Location = new System.Drawing.Point(20, 179);
-            this.elementsPanel2.Name = "elementsPanel2";
-            this.elementsPanel2.Size = new System.Drawing.Size(200, 100);
-            this.elementsPanel2.TabIndex = 2;
+            this.textPanel.AllowDrop = true;
+            this.textPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.textPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textPanel.Controls.Add(this.elementsTextLabel);
+            this.textPanel.Location = new System.Drawing.Point(20, 324);
+            this.textPanel.Name = "textPanel";
+            this.textPanel.Size = new System.Drawing.Size(200, 100);
+            this.textPanel.TabIndex = 3;
             // 
-            // elementsPanel1
+            // elementsTextLabel
             // 
-            this.elementsPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.elementsPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.elementsPanel1.Controls.Add(this.label2);
-            this.elementsPanel1.Location = new System.Drawing.Point(20, 31);
-            this.elementsPanel1.Name = "elementsPanel1";
-            this.elementsPanel1.Size = new System.Drawing.Size(200, 100);
-            this.elementsPanel1.TabIndex = 1;
+            this.elementsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elementsTextLabel.Location = new System.Drawing.Point(-1, 27);
+            this.elementsTextLabel.Name = "elementsTextLabel";
+            this.elementsTextLabel.Size = new System.Drawing.Size(200, 41);
+            this.elementsTextLabel.TabIndex = 11;
+            this.elementsTextLabel.Text = "Текст";
+            this.elementsTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.elementsTextLabel.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
+            // 
+            // musicPanel
+            // 
+            this.musicPanel.AllowDrop = true;
+            this.musicPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.musicPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.musicPanel.Controls.Add(this.elementsMusicLabel);
+            this.musicPanel.Location = new System.Drawing.Point(20, 179);
+            this.musicPanel.Name = "musicPanel";
+            this.musicPanel.Size = new System.Drawing.Size(200, 100);
+            this.musicPanel.TabIndex = 2;
+            this.musicPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragDrop);
+            this.musicPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragEnter);
+            // 
+            // elementsMusicLabel
+            // 
+            this.elementsMusicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elementsMusicLabel.Location = new System.Drawing.Point(-1, 29);
+            this.elementsMusicLabel.Name = "elementsMusicLabel";
+            this.elementsMusicLabel.Size = new System.Drawing.Size(200, 41);
+            this.elementsMusicLabel.TabIndex = 13;
+            this.elementsMusicLabel.Text = "Музыка";
+            this.elementsMusicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // elementsPicLabel
+            // 
+            this.elementsPicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elementsPicLabel.Location = new System.Drawing.Point(-1, 26);
+            this.elementsPicLabel.Name = "elementsPicLabel";
+            this.elementsPicLabel.Size = new System.Drawing.Size(200, 41);
+            this.elementsPicLabel.TabIndex = 12;
+            this.elementsPicLabel.Text = "Картинка";
+            this.elementsPicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.elementsPicLabel.UseMnemonic = false;
             // 
             // postcardTemplatePanel
             // 
@@ -301,7 +350,7 @@
             // 
             this.postcardElementsLabel.AutoSize = true;
             this.postcardElementsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postcardElementsLabel.Location = new System.Drawing.Point(805, 58);
+            this.postcardElementsLabel.Location = new System.Drawing.Point(822, 58);
             this.postcardElementsLabel.Name = "postcardElementsLabel";
             this.postcardElementsLabel.Size = new System.Drawing.Size(102, 24);
             this.postcardElementsLabel.TabIndex = 5;
@@ -316,37 +365,6 @@
             this.templatePostcardLabel.Size = new System.Drawing.Size(179, 24);
             this.templatePostcardLabel.TabIndex = 6;
             this.templatePostcardLabel.Text = "Шаблоны открыток";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(-1, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 98);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Текст";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(-1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 98);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Картинка";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(-1, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 98);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Музыка";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Generator
             // 
@@ -366,9 +384,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.postcardPanel.ResumeLayout(false);
             this.componentsPanel.ResumeLayout(false);
-            this.elementsPanel3.ResumeLayout(false);
-            this.elementsPanel2.ResumeLayout(false);
-            this.elementsPanel1.ResumeLayout(false);
+            this.picturePanel.ResumeLayout(false);
+            this.textPanel.ResumeLayout(false);
+            this.musicPanel.ResumeLayout(false);
             this.postcardTemplatePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -391,20 +409,20 @@
         private System.Windows.Forms.Panel templatePanel2;
         private System.Windows.Forms.Panel templatePanel1;
         private System.Windows.Forms.Panel topCenterPanel;
-        private System.Windows.Forms.Panel elementsPanel3;
-        private System.Windows.Forms.Panel elementsPanel2;
-        private System.Windows.Forms.Panel elementsPanel1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel textPanel;
+        private System.Windows.Forms.Panel musicPanel;
+        private System.Windows.Forms.Panel picturePanel;
+        private System.Windows.Forms.Panel bottomRightPanel;
+        private System.Windows.Forms.Panel centerRightPanel;
+        private System.Windows.Forms.Panel midleCenterPanel;
+        private System.Windows.Forms.Panel bottomCenterPanel;
+        private System.Windows.Forms.Panel bottomLeftPanel;
+        private System.Windows.Forms.Panel midleLeftPanel;
+        private System.Windows.Forms.Panel topRightPanel;
+        private System.Windows.Forms.Panel topLeftPanel;
+        private System.Windows.Forms.Label elementsTextLabel;
+        private System.Windows.Forms.Label elementsMusicLabel;
+        private System.Windows.Forms.Label elementsPicLabel;
     }
 }
 
