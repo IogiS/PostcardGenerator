@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PostcardGenerator.Work;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,77 +15,48 @@ namespace PostcardGenerator
     public partial class Generator : Form
     {
 
-
+        Events events;
         public Generator()
         {
             InitializeComponent();
             Templates.panels = new List<Panel>() { templatePanel1, templatePanel2, templatePanel3, templatePanel4, templatePanel5 };
+            events = new Events(picturePanel, elementsPicLabel, musicPanel, elementsMusicLabel,volumeScroll);
+
         }
 
         private void Form1_Load(object sender, EventArgs e) => Templates.Load();
 
 
 
-        private void panel_DoubleClick(object sender, EventArgs e)
-        {
-            Templates.ApplyTemplate(sender, postcardPanel);
-
-        }
+        private void panel_DoubleClick(object sender, EventArgs e) => Templates.ApplyTemplate(sender, postcardPanel);
+        
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_DoubleClick(object sender, EventArgs e)
+        private void label1_DoubleClick(object sender, EventArgs e) => elementsTextLabel.Visible = false;
+
+
+        private void elementsPanel1_DragEnter(object sender, DragEventArgs e) => events.elementsPanels_DragEnterEvent(sender, e);
+
+
+        private void elementsPanel1_DragDrop(object sender, DragEventArgs e) => events.picturePanel_DragDropEvent(e);
+
+        private void musicPanel_DragDrop(object sender, DragEventArgs e) => events.picturePanel_DragDropEvent(e);
+
+        private void postcardElementsLabel_Click(object sender, EventArgs e)
         {
-            elementsTextLabel.Visible = false;
+
         }
 
-        private void elementsPanel1_DragLeave(object sender, EventArgs e)
-        {
+        private void playButton_Click(object sender, EventArgs e) => events.playEvent();
 
-        }
+        private void stopButton_Click(object sender, EventArgs e) => events.stopEvent();
 
-        private void elementsPanel1_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                
-                e.Effect = DragDropEffects.Copy;
-                
-            }
-        }
-
-        private void elementsPanel1_DragDrop(object sender, DragEventArgs e)
-        {
-            List<string> formats = new List<string> {"png","jpg","jpeg","gif"};
-            try
-            {
-                foreach (var item in (string[])e.Data.GetData(DataFormats.FileDrop))
-                {
-                    string format = item.Split('.')[item.Split('.').Count() - 1];
-                    for (int i = 0; i < formats.Count; i++)
-                    {
-                        if (format == formats[i])
-                        {
-                            picturePanel.BackgroundImage = new Bitmap(item);
-                            elementsPicLabel.Visible = false;
-                            break;
-                        }                        
-                    }                    
-                    
-                    
-                }
-                if (elementsPicLabel.Visible)
-                {
-                    throw new FormatException();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Неверный формат\n" + ex);
-            }
-        }
+        private void volumeScroll_Scroll(object sender, EventArgs e) => events.volumeEvent();
+   
+        private void button1_Click(object sender, EventArgs e) => events.pauseEvent();
     }
 }

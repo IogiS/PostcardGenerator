@@ -40,11 +40,11 @@
             this.topCenterPanel = new System.Windows.Forms.Panel();
             this.componentsPanel = new System.Windows.Forms.Panel();
             this.picturePanel = new System.Windows.Forms.Panel();
+            this.elementsPicLabel = new System.Windows.Forms.Label();
             this.textPanel = new System.Windows.Forms.Panel();
             this.elementsTextLabel = new System.Windows.Forms.Label();
             this.musicPanel = new System.Windows.Forms.Panel();
             this.elementsMusicLabel = new System.Windows.Forms.Label();
-            this.elementsPicLabel = new System.Windows.Forms.Label();
             this.postcardTemplatePanel = new System.Windows.Forms.Panel();
             this.templatePanel5 = new System.Windows.Forms.Panel();
             this.templatePanel4 = new System.Windows.Forms.Panel();
@@ -56,12 +56,17 @@
             this.postcardLabel = new System.Windows.Forms.Label();
             this.postcardElementsLabel = new System.Windows.Forms.Label();
             this.templatePostcardLabel = new System.Windows.Forms.Label();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
+            this.volumeScroll = new System.Windows.Forms.TrackBar();
+            this.button1 = new System.Windows.Forms.Button();
             this.postcardPanel.SuspendLayout();
             this.componentsPanel.SuspendLayout();
             this.picturePanel.SuspendLayout();
             this.textPanel.SuspendLayout();
             this.musicPanel.SuspendLayout();
             this.postcardTemplatePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).BeginInit();
             this.SuspendLayout();
             // 
             // postcardPanel
@@ -189,13 +194,24 @@
             this.picturePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picturePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picturePanel.Controls.Add(this.elementsPicLabel);
-            this.picturePanel.Location = new System.Drawing.Point(22, 19);
+            this.picturePanel.Location = new System.Drawing.Point(3, 3);
             this.picturePanel.Name = "picturePanel";
-            this.picturePanel.Size = new System.Drawing.Size(200, 100);
+            this.picturePanel.Size = new System.Drawing.Size(225, 144);
             this.picturePanel.TabIndex = 1;
             this.picturePanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragDrop);
             this.picturePanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragEnter);
-            this.picturePanel.DragLeave += new System.EventHandler(this.elementsPanel1_DragLeave);
+            // 
+            // elementsPicLabel
+            // 
+            this.elementsPicLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementsPicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.elementsPicLabel.Location = new System.Drawing.Point(0, 0);
+            this.elementsPicLabel.Name = "elementsPicLabel";
+            this.elementsPicLabel.Size = new System.Drawing.Size(223, 142);
+            this.elementsPicLabel.TabIndex = 12;
+            this.elementsPicLabel.Text = "Картинка";
+            this.elementsPicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.elementsPicLabel.UseMnemonic = false;
             // 
             // textPanel
             // 
@@ -203,17 +219,18 @@
             this.textPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.textPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textPanel.Controls.Add(this.elementsTextLabel);
-            this.textPanel.Location = new System.Drawing.Point(20, 324);
+            this.textPanel.Location = new System.Drawing.Point(3, 308);
             this.textPanel.Name = "textPanel";
-            this.textPanel.Size = new System.Drawing.Size(200, 100);
+            this.textPanel.Size = new System.Drawing.Size(225, 144);
             this.textPanel.TabIndex = 3;
             // 
             // elementsTextLabel
             // 
+            this.elementsTextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsTextLabel.Location = new System.Drawing.Point(-1, 27);
+            this.elementsTextLabel.Location = new System.Drawing.Point(0, 0);
             this.elementsTextLabel.Name = "elementsTextLabel";
-            this.elementsTextLabel.Size = new System.Drawing.Size(200, 41);
+            this.elementsTextLabel.Size = new System.Drawing.Size(223, 142);
             this.elementsTextLabel.TabIndex = 11;
             this.elementsTextLabel.Text = "Текст";
             this.elementsTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,33 +242,23 @@
             this.musicPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.musicPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.musicPanel.Controls.Add(this.elementsMusicLabel);
-            this.musicPanel.Location = new System.Drawing.Point(20, 179);
+            this.musicPanel.Location = new System.Drawing.Point(3, 153);
             this.musicPanel.Name = "musicPanel";
-            this.musicPanel.Size = new System.Drawing.Size(200, 100);
+            this.musicPanel.Size = new System.Drawing.Size(225, 144);
             this.musicPanel.TabIndex = 2;
-            this.musicPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragDrop);
+            this.musicPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.musicPanel_DragDrop);
             this.musicPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.elementsPanel1_DragEnter);
             // 
             // elementsMusicLabel
             // 
+            this.elementsMusicLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementsMusicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsMusicLabel.Location = new System.Drawing.Point(-1, 29);
+            this.elementsMusicLabel.Location = new System.Drawing.Point(0, 0);
             this.elementsMusicLabel.Name = "elementsMusicLabel";
-            this.elementsMusicLabel.Size = new System.Drawing.Size(200, 41);
+            this.elementsMusicLabel.Size = new System.Drawing.Size(223, 142);
             this.elementsMusicLabel.TabIndex = 13;
             this.elementsMusicLabel.Text = "Музыка";
             this.elementsMusicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // elementsPicLabel
-            // 
-            this.elementsPicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsPicLabel.Location = new System.Drawing.Point(-1, 26);
-            this.elementsPicLabel.Name = "elementsPicLabel";
-            this.elementsPicLabel.Size = new System.Drawing.Size(200, 41);
-            this.elementsPicLabel.TabIndex = 12;
-            this.elementsPicLabel.Text = "Картинка";
-            this.elementsPicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.elementsPicLabel.UseMnemonic = false;
             // 
             // postcardTemplatePanel
             // 
@@ -340,7 +347,7 @@
             // 
             this.postcardLabel.AutoSize = true;
             this.postcardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postcardLabel.Location = new System.Drawing.Point(8, 58);
+            this.postcardLabel.Location = new System.Drawing.Point(8, 70);
             this.postcardLabel.Name = "postcardLabel";
             this.postcardLabel.Size = new System.Drawing.Size(97, 24);
             this.postcardLabel.TabIndex = 0;
@@ -350,11 +357,12 @@
             // 
             this.postcardElementsLabel.AutoSize = true;
             this.postcardElementsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postcardElementsLabel.Location = new System.Drawing.Point(822, 58);
+            this.postcardElementsLabel.Location = new System.Drawing.Point(826, 68);
             this.postcardElementsLabel.Name = "postcardElementsLabel";
             this.postcardElementsLabel.Size = new System.Drawing.Size(102, 24);
             this.postcardElementsLabel.TabIndex = 5;
             this.postcardElementsLabel.Text = "Элементы";
+            this.postcardElementsLabel.Click += new System.EventHandler(this.postcardElementsLabel_Click);
             // 
             // templatePostcardLabel
             // 
@@ -366,11 +374,59 @@
             this.templatePostcardLabel.TabIndex = 6;
             this.templatePostcardLabel.Text = "Шаблоны открыток";
             // 
+            // stopButton
+            // 
+            this.stopButton.BackgroundImage = global::PostcardGenerator.Properties.Resources.Media_Controls_Stop_icon;
+            this.stopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.stopButton.Location = new System.Drawing.Point(886, 10);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(50, 50);
+            this.stopButton.TabIndex = 8;
+            this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            // 
+            // playButton
+            // 
+            this.playButton.BackgroundImage = global::PostcardGenerator.Properties.Resources._1200px_Stylingbar_point_right_svg;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playButton.Location = new System.Drawing.Point(774, 10);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(50, 50);
+            this.playButton.TabIndex = 7;
+            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            // 
+            // volumeScroll
+            // 
+            this.volumeScroll.Location = new System.Drawing.Point(942, 15);
+            this.volumeScroll.Maximum = 100;
+            this.volumeScroll.Name = "volumeScroll";
+            this.volumeScroll.Size = new System.Drawing.Size(104, 45);
+            this.volumeScroll.TabIndex = 9;
+            this.volumeScroll.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.volumeScroll.Value = 50;
+            this.volumeScroll.Scroll += new System.EventHandler(this.volumeScroll_Scroll);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::PostcardGenerator.Properties.Resources.pause36;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(830, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 725);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.volumeScroll);
+            this.Controls.Add(this.stopButton);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.templatePostcardLabel);
             this.Controls.Add(this.postcardElementsLabel);
             this.Controls.Add(this.postcardLabel);
@@ -388,6 +444,7 @@
             this.textPanel.ResumeLayout(false);
             this.musicPanel.ResumeLayout(false);
             this.postcardTemplatePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +480,10 @@
         private System.Windows.Forms.Label elementsTextLabel;
         private System.Windows.Forms.Label elementsMusicLabel;
         private System.Windows.Forms.Label elementsPicLabel;
+        private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.TrackBar volumeScroll;
+        private System.Windows.Forms.Button button1;
     }
 }
 
