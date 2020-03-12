@@ -52,6 +52,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TextSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextSetting.Designer.cs">
+      <DependentUpon>TextSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Work\Elements.cs" />
     <Compile Include="Work\Events.cs" />
     <Compile Include="Work\IEvents.cs" />
@@ -81,6 +87,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TextSetting.resx">
+      <DependentUpon>TextSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

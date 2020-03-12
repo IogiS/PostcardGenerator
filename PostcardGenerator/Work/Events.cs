@@ -5,24 +5,44 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Media;
 using System.Windows.Media;
+using Color = System.Drawing.Color;
 
 namespace PostcardGenerator.Work
 {
     public class Events : IEvents
     {
-        Panel elementPanel, musicPanel;
-        Label elementLabel, elementsMusicLabel;
-        TrackBar volumeScroll;
 
+        Panel elementPanel { get; set; }
+         Panel musicPanel { get; set; }
+         Label elementLabel { get; set; }
+         Label elementsMusicLabel { get; set; }
+         TrackBar volumeScroll { get; set; }
 
-        public Events(Panel elementPanel, Label elementLabel, Panel musicPanel, Label elementsMusicLabel, TrackBar volumeScroll)
+        TextBox textBox { get; set; }
+        
+         ComboBox fontsComboBox { get; set; }
+         ComboBox sizeComboBox { get; set; }
+
+        ColorDialog choosingColor { get; set; }
+        public Label testLabel { get; set; }
+        public Events(Panel elementPanel, Label elementLabel, Panel musicPanel, Label elementsMusicLabel, TrackBar volumeScroll, TextBox textBox)
         {
             this.elementPanel = elementPanel;
             this.musicPanel = musicPanel;
             this.elementLabel = elementLabel;
             this.elementsMusicLabel = elementsMusicLabel;
             this.volumeScroll = volumeScroll;
+            this.textBox = textBox;
         }
+        public Events(ComboBox fontsComboBox, ComboBox sizeComboBox, Label testLabel, ColorDialog choosingColor) 
+        {
+            this.fontsComboBox = fontsComboBox;
+            this.sizeComboBox = sizeComboBox;
+            this.testLabel = testLabel;
+            this.choosingColor = choosingColor;
+        }
+
+
 
         public void picturePanel_DragDropEvent(DragEventArgs e)
         {           
@@ -92,5 +112,72 @@ namespace PostcardGenerator.Work
         public void volumeEvent() => MusicSettings.ChangeVolume((double)volumeScroll.Value / 100);
 
         public void pauseEvent() => MusicSettings.Pause();
+
+        public void showTextSettings()
+        {
+            TextSetting textSetting = new TextSetting();
+            textSetting.Show();
+        }
+
+        public void fontsChange()
+        {
+            try
+            {
+                testLabel.Font = new Font(fontsComboBox.Text, testLabel.Font.Size);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void sizeChange()
+        {
+            try
+            {
+                testLabel.Font = new Font(testLabel.Font.FontFamily, float.Parse(sizeComboBox.SelectedItem.ToString()));
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void colorChange()
+        {
+            try
+            {
+                DialogResult colors = choosingColor.ShowDialog();
+                if (colors == DialogResult.OK)
+                {
+                    testLabel.ForeColor = choosingColor.Color;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void changeToRegular() => testLabel.Font = new Font(testLabel.Font.FontFamily, testLabel.Font.Size, FontStyle.Regular);
+
+        public void changeToBold() => testLabel.Font = new Font(testLabel.Font.FontFamily, testLabel.Font.Size, FontStyle.Bold);
+
+        public void changeToUnderLine() => testLabel.Font = new Font(testLabel.Font.FontFamily, testLabel.Font.Size, FontStyle.Underline);
+
+        public void changeToStrikeout() => testLabel.Font = new Font(testLabel.Font.FontFamily, testLabel.Font.Size, FontStyle.Strikeout);
+
+        public void saveSettings(Font font, Size size,Color color)
+        {
+            TextSettings.font = font;
+            TextSettings.color = color;
+            TextSettings.changed = true;
+            
+        }
     }
 }

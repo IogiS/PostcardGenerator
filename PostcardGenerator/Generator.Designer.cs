@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.postcardPanel = new System.Windows.Forms.Panel();
             this.bottomRightPanel = new System.Windows.Forms.Panel();
             this.centerRightPanel = new System.Windows.Forms.Panel();
@@ -43,6 +44,13 @@
             this.elementsPicLabel = new System.Windows.Forms.Label();
             this.textPanel = new System.Windows.Forms.Panel();
             this.elementsTextLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.настроитьТекстToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настроитьТекстToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.картинкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.увеличитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.уменьшитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.musicPanel = new System.Windows.Forms.Panel();
             this.elementsMusicLabel = new System.Windows.Forms.Label();
             this.postcardTemplatePanel = new System.Windows.Forms.Panel();
@@ -64,6 +72,7 @@
             this.componentsPanel.SuspendLayout();
             this.picturePanel.SuspendLayout();
             this.textPanel.SuspendLayout();
+            this.contextMenu.SuspendLayout();
             this.musicPanel.SuspendLayout();
             this.postcardTemplatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).BeginInit();
@@ -219,6 +228,7 @@
             this.textPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.textPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textPanel.Controls.Add(this.elementsTextLabel);
+            this.textPanel.Controls.Add(this.textBox1);
             this.textPanel.Location = new System.Drawing.Point(3, 308);
             this.textPanel.Name = "textPanel";
             this.textPanel.Size = new System.Drawing.Size(225, 144);
@@ -226,15 +236,72 @@
             // 
             // elementsTextLabel
             // 
-            this.elementsTextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsTextLabel.Location = new System.Drawing.Point(0, 0);
+            this.elementsTextLabel.Location = new System.Drawing.Point(0, 93);
             this.elementsTextLabel.Name = "elementsTextLabel";
-            this.elementsTextLabel.Size = new System.Drawing.Size(223, 142);
+            this.elementsTextLabel.Size = new System.Drawing.Size(223, 49);
             this.elementsTextLabel.TabIndex = 11;
             this.elementsTextLabel.Text = "Текст";
             this.elementsTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.elementsTextLabel.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.ContextMenuStrip = this.contextMenu;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.MaximumSize = new System.Drawing.Size(223, 142);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(223, 142);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.ContextMenuStripChanged += new System.EventHandler(this.textBox1_ContextMenuStripChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настроитьТекстToolStripMenuItem,
+            this.картинкаToolStripMenuItem});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(126, 48);
+            // 
+            // настроитьТекстToolStripMenuItem
+            // 
+            this.настроитьТекстToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настроитьТекстToolStripMenuItem1});
+            this.настроитьТекстToolStripMenuItem.Name = "настроитьТекстToolStripMenuItem";
+            this.настроитьТекстToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.настроитьТекстToolStripMenuItem.Text = "Текст";
+            // 
+            // настроитьТекстToolStripMenuItem1
+            // 
+            this.настроитьТекстToolStripMenuItem1.Name = "настроитьТекстToolStripMenuItem1";
+            this.настроитьТекстToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.настроитьТекстToolStripMenuItem1.Text = "Настроить текст";
+            this.настроитьТекстToolStripMenuItem1.Click += new System.EventHandler(this.настроитьТекстToolStripMenuItem1_Click);
+            // 
+            // картинкаToolStripMenuItem
+            // 
+            this.картинкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.увеличитьToolStripMenuItem,
+            this.уменьшитьToolStripMenuItem});
+            this.картинкаToolStripMenuItem.Name = "картинкаToolStripMenuItem";
+            this.картинкаToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.картинкаToolStripMenuItem.Text = "Картинка";
+            // 
+            // увеличитьToolStripMenuItem
+            // 
+            this.увеличитьToolStripMenuItem.Name = "увеличитьToolStripMenuItem";
+            this.увеличитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.увеличитьToolStripMenuItem.Text = "Увеличить";
+            // 
+            // уменьшитьToolStripMenuItem
+            // 
+            this.уменьшитьToolStripMenuItem.Name = "уменьшитьToolStripMenuItem";
+            this.уменьшитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.уменьшитьToolStripMenuItem.Text = "Уменьшить";
             // 
             // musicPanel
             // 
@@ -362,7 +429,6 @@
             this.postcardElementsLabel.Size = new System.Drawing.Size(102, 24);
             this.postcardElementsLabel.TabIndex = 5;
             this.postcardElementsLabel.Text = "Элементы";
-            this.postcardElementsLabel.Click += new System.EventHandler(this.postcardElementsLabel_Click);
             // 
             // templatePostcardLabel
             // 
@@ -388,7 +454,7 @@
             // playButton
             // 
             this.playButton.BackgroundImage = global::PostcardGenerator.Properties.Resources._1200px_Stylingbar_point_right_svg;
-            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.playButton.Location = new System.Drawing.Point(774, 10);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(50, 50);
@@ -435,6 +501,8 @@
             this.Controls.Add(this.postcardTemplatePanel);
             this.Controls.Add(this.componentsPanel);
             this.Controls.Add(this.postcardPanel);
+            this.MaximumSize = new System.Drawing.Size(1088, 764);
+            this.MinimumSize = new System.Drawing.Size(1088, 764);
             this.Name = "Generator";
             this.Text = "PostcardsGenerator";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -442,6 +510,8 @@
             this.componentsPanel.ResumeLayout(false);
             this.picturePanel.ResumeLayout(false);
             this.textPanel.ResumeLayout(false);
+            this.textPanel.PerformLayout();
+            this.contextMenu.ResumeLayout(false);
             this.musicPanel.ResumeLayout(false);
             this.postcardTemplatePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).EndInit();
@@ -484,6 +554,13 @@
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.TrackBar volumeScroll;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
+        private System.Windows.Forms.ToolStripMenuItem настроитьТекстToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem настроитьТекстToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem картинкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem увеличитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem уменьшитьToolStripMenuItem;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }
 

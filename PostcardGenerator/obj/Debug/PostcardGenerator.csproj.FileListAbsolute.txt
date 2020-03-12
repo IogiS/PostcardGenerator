@@ -9,3 +9,4 @@ C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\Postca
 C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.pdb
 C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\Interop.WMPLib.dll
 C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.csproj.ResolveComReference.cache
+C:\Users\LogiS\source\repos\PostcardGenerator\PostcardGenerator\obj\Debug\PostcardGenerator.TextSetting.resources
