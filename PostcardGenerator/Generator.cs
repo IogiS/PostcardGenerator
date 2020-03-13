@@ -24,7 +24,7 @@ namespace PostcardGenerator
             InitializeComponent();
             Templates.panels = new List<Panel>() { templatePanel1, templatePanel2, templatePanel3, templatePanel4, templatePanel5 };
             events = new GeneratorEvents(picturePanel, elementsPicLabel, musicPanel, elementsMusicLabel,volumeScroll , textBox1);
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e) => Templates.Load();
@@ -75,16 +75,18 @@ namespace PostcardGenerator
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "JSON files(*.json)|*.json";
-            ofd.ShowDialog();
+            //ofd.ShowDialog();
             
             string path = ofd.FileName;
-            string text = "";
 
-            var setting = new SavingSettings() { SettingName = "Tom", SettingValue = "35" };
+            SavingSettings setting = new SavingSettings() { SettingName = "Tom", SettingValue = "35" , SettingImage = postcardPanel.BackgroundImage.Clone() };
 
+            List<SavingSettings> savingSettings = new List<SavingSettings>();
+            File.WriteAllText("settings.json", JsonConvert.SerializeObject(setting));
 
-            File.WriteAllText(path, JsonConvert.SerializeObject(setting));
+           var a = postcardPanel.BackgroundImage.Clone();
 
+            elementsPicLabel.Visible = false;
         }
     }
 
