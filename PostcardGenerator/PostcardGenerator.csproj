@@ -58,11 +58,9 @@
     <Compile Include="TextSetting.Designer.cs">
       <DependentUpon>TextSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Work\Elements.cs" />
-    <Compile Include="Work\Events.cs" />
+    <Compile Include="Work\GeneratorEvents.cs" />
     <Compile Include="Work\IEvents.cs" />
     <Compile Include="Work\MusicSettings.cs" />
-    <Compile Include="Work\PictureSettings.cs" />
     <Compile Include="Work\Saving.cs" />
     <Compile Include="Generator.cs">
       <SubType>Form</SubType>
@@ -73,6 +71,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Work\Templates.cs" />
+    <Compile Include="Work\TextEvents.cs" />
     <Compile Include="Work\TextSettings.cs" />
     <EmbeddedResource Include="Generator.resx">
       <DependentUpon>Generator.cs</DependentUpon>

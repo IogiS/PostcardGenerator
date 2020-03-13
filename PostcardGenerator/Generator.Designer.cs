@@ -104,7 +104,6 @@
             this.bottomRightPanel.Name = "bottomRightPanel";
             this.bottomRightPanel.Size = new System.Drawing.Size(260, 144);
             this.bottomRightPanel.TabIndex = 2;
-            this.bottomRightPanel.Visible = false;
             // 
             // centerRightPanel
             // 
@@ -114,7 +113,6 @@
             this.centerRightPanel.Name = "centerRightPanel";
             this.centerRightPanel.Size = new System.Drawing.Size(260, 144);
             this.centerRightPanel.TabIndex = 2;
-            this.centerRightPanel.Visible = false;
             // 
             // midleCenterPanel
             // 
@@ -124,7 +122,6 @@
             this.midleCenterPanel.Name = "midleCenterPanel";
             this.midleCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.midleCenterPanel.TabIndex = 2;
-            this.midleCenterPanel.Visible = false;
             // 
             // bottomCenterPanel
             // 
@@ -134,7 +131,6 @@
             this.bottomCenterPanel.Name = "bottomCenterPanel";
             this.bottomCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.bottomCenterPanel.TabIndex = 2;
-            this.bottomCenterPanel.Visible = false;
             // 
             // bottomLeftPanel
             // 
@@ -144,7 +140,6 @@
             this.bottomLeftPanel.Name = "bottomLeftPanel";
             this.bottomLeftPanel.Size = new System.Drawing.Size(260, 144);
             this.bottomLeftPanel.TabIndex = 2;
-            this.bottomLeftPanel.Visible = false;
             // 
             // midleLeftPanel
             // 
@@ -154,7 +149,6 @@
             this.midleLeftPanel.Name = "midleLeftPanel";
             this.midleLeftPanel.Size = new System.Drawing.Size(260, 144);
             this.midleLeftPanel.TabIndex = 2;
-            this.midleLeftPanel.Visible = false;
             // 
             // topRightPanel
             // 
@@ -164,7 +158,6 @@
             this.topRightPanel.Name = "topRightPanel";
             this.topRightPanel.Size = new System.Drawing.Size(260, 144);
             this.topRightPanel.TabIndex = 1;
-            this.topRightPanel.Visible = false;
             // 
             // topLeftPanel
             // 
@@ -174,7 +167,6 @@
             this.topLeftPanel.Name = "topLeftPanel";
             this.topLeftPanel.Size = new System.Drawing.Size(260, 144);
             this.topLeftPanel.TabIndex = 1;
-            this.topLeftPanel.Visible = false;
             // 
             // topCenterPanel
             // 
@@ -184,7 +176,6 @@
             this.topCenterPanel.Name = "topCenterPanel";
             this.topCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.topCenterPanel.TabIndex = 0;
-            this.topCenterPanel.Visible = false;
             // 
             // componentsPanel
             // 
@@ -236,10 +227,11 @@
             // 
             // elementsTextLabel
             // 
+            this.elementsTextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsTextLabel.Location = new System.Drawing.Point(0, 93);
+            this.elementsTextLabel.Location = new System.Drawing.Point(0, 0);
             this.elementsTextLabel.Name = "elementsTextLabel";
-            this.elementsTextLabel.Size = new System.Drawing.Size(223, 49);
+            this.elementsTextLabel.Size = new System.Drawing.Size(223, 142);
             this.elementsTextLabel.TabIndex = 11;
             this.elementsTextLabel.Text = "Текст";
             this.elementsTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -403,7 +395,7 @@
             // openProjektButton
             // 
             this.openProjektButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.openProjektButton.Location = new System.Drawing.Point(317, 12);
+            this.openProjektButton.Location = new System.Drawing.Point(437, 12);
             this.openProjektButton.Name = "openProjektButton";
             this.openProjektButton.Size = new System.Drawing.Size(170, 43);
             this.openProjektButton.TabIndex = 4;

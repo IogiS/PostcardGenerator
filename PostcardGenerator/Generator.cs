@@ -15,12 +15,12 @@ namespace PostcardGenerator
     public partial class Generator : Form
     {
 
-        Events events;
+        GeneratorEvents events;
         public Generator()
         {
             InitializeComponent();
             Templates.panels = new List<Panel>() { templatePanel1, templatePanel2, templatePanel3, templatePanel4, templatePanel5 };
-            events = new Events(picturePanel, elementsPicLabel, musicPanel, elementsMusicLabel,volumeScroll , textBox1);
+            events = new GeneratorEvents(picturePanel, elementsPicLabel, musicPanel, elementsMusicLabel,volumeScroll , textBox1);
 
         }
 

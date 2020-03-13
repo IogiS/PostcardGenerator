@@ -1,12 +1,5 @@
 ﻿using PostcardGenerator.Work;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PostcardGenerator
@@ -18,12 +11,12 @@ namespace PostcardGenerator
 
         
 
-        Events events;
+        TextEvents events;
 
         public TextSetting()
         {
             InitializeComponent();
-            events = new Events(fontsComboBox,sizeComboBox,testLabel, choosingColor);
+            events = new TextEvents(fontsComboBox,sizeComboBox,testLabel, choosingColor);
         }
 
         private void TextSetting_Load(object sender, EventArgs e)
