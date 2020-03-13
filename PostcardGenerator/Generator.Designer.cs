@@ -68,6 +68,10 @@
             this.playButton = new System.Windows.Forms.Button();
             this.volumeScroll = new System.Windows.Forms.TrackBar();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataSet1 = new System.Data.DataSet();
+            this.dataTable1 = new System.Data.DataTable();
+            this.dataColumn1 = new System.Data.DataColumn();
+            this.dataColumn2 = new System.Data.DataColumn();
             this.postcardPanel.SuspendLayout();
             this.componentsPanel.SuspendLayout();
             this.picturePanel.SuspendLayout();
@@ -76,6 +80,8 @@
             this.musicPanel.SuspendLayout();
             this.postcardTemplatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
             this.SuspendLayout();
             // 
             // postcardPanel
@@ -391,6 +397,7 @@
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // openProjektButton
             // 
@@ -476,6 +483,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "NewDataSet";
+            this.dataSet1.Tables.AddRange(new System.Data.DataTable[] {
+            this.dataTable1});
+            // 
+            // dataTable1
+            // 
+            this.dataTable1.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn1,
+            this.dataColumn2});
+            this.dataTable1.TableName = "Settings";
+            // 
+            // dataColumn1
+            // 
+            this.dataColumn1.ColumnName = "SettingName";
+            // 
+            // dataColumn2
+            // 
+            this.dataColumn2.ColumnName = "SettingValue";
+            // 
             // Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,6 +535,8 @@
             this.musicPanel.ResumeLayout(false);
             this.postcardTemplatePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,6 +583,10 @@
         private System.Windows.Forms.ToolStripMenuItem увеличитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem уменьшитьToolStripMenuItem;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Data.DataSet dataSet1;
+        private System.Data.DataTable dataTable1;
+        private System.Data.DataColumn dataColumn1;
+        private System.Data.DataColumn dataColumn2;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using PostcardGenerator.Work;
+﻿using PostcardGenerator.Properties;
+using PostcardGenerator.Work;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace PostcardGenerator
 {
@@ -61,5 +64,28 @@ namespace PostcardGenerator
         {
            
         }
+
+        
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void  Save()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "JSON files(*.json)|*.json";
+            ofd.ShowDialog();
+            
+            string path = ofd.FileName;
+            string text = "";
+
+            var setting = new SavingSettings() { SettingName = "Tom", SettingValue = "35" };
+
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(setting));
+
+        }
     }
+
 }
