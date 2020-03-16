@@ -31,26 +31,37 @@
             this.components = new System.ComponentModel.Container();
             this.postcardPanel = new System.Windows.Forms.Panel();
             this.bottomRightPanel = new System.Windows.Forms.Panel();
+            this.bottomRightLabel = new System.Windows.Forms.Label();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.настроитьТекстToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настроитьТекстToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.add = new System.Windows.Forms.ToolStripMenuItem();
+            this.del = new System.Windows.Forms.ToolStripMenuItem();
+            this.картинкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.увеличитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.уменьшитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.centerRightPanel = new System.Windows.Forms.Panel();
+            this.MiddleRightLabel = new System.Windows.Forms.Label();
             this.midleCenterPanel = new System.Windows.Forms.Panel();
+            this.centerMiddleLabel = new System.Windows.Forms.Label();
             this.bottomCenterPanel = new System.Windows.Forms.Panel();
+            this.bottomMiddleLabel = new System.Windows.Forms.Label();
             this.bottomLeftPanel = new System.Windows.Forms.Panel();
+            this.bottomLeftLabel = new System.Windows.Forms.Label();
             this.midleLeftPanel = new System.Windows.Forms.Panel();
+            this.centerLeftLabel = new System.Windows.Forms.Label();
             this.topRightPanel = new System.Windows.Forms.Panel();
+            this.topRightLabel = new System.Windows.Forms.Label();
             this.topLeftPanel = new System.Windows.Forms.Panel();
+            this.topLeftLabel = new System.Windows.Forms.Label();
             this.topCenterPanel = new System.Windows.Forms.Panel();
+            this.topMiddleLabel = new System.Windows.Forms.Label();
             this.componentsPanel = new System.Windows.Forms.Panel();
             this.picturePanel = new System.Windows.Forms.Panel();
             this.elementsPicLabel = new System.Windows.Forms.Label();
             this.textPanel = new System.Windows.Forms.Panel();
             this.elementsTextLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.настроитьТекстToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настроитьТекстToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.картинкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.увеличитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.уменьшитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.musicPanel = new System.Windows.Forms.Panel();
             this.elementsMusicLabel = new System.Windows.Forms.Label();
             this.postcardTemplatePanel = new System.Windows.Forms.Panel();
@@ -72,11 +83,21 @@
             this.dataTable1 = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
             this.dataColumn2 = new System.Data.DataColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.postcardPanel.SuspendLayout();
+            this.bottomRightPanel.SuspendLayout();
+            this.contextMenu.SuspendLayout();
+            this.centerRightPanel.SuspendLayout();
+            this.midleCenterPanel.SuspendLayout();
+            this.bottomCenterPanel.SuspendLayout();
+            this.bottomLeftPanel.SuspendLayout();
+            this.midleLeftPanel.SuspendLayout();
+            this.topRightPanel.SuspendLayout();
+            this.topLeftPanel.SuspendLayout();
+            this.topCenterPanel.SuspendLayout();
             this.componentsPanel.SuspendLayout();
             this.picturePanel.SuspendLayout();
             this.textPanel.SuspendLayout();
-            this.contextMenu.SuspendLayout();
             this.musicPanel.SuspendLayout();
             this.postcardTemplatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).BeginInit();
@@ -104,84 +125,290 @@
             // 
             // bottomRightPanel
             // 
+            this.bottomRightPanel.AllowDrop = true;
             this.bottomRightPanel.BackColor = System.Drawing.Color.Transparent;
             this.bottomRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomRightPanel.Controls.Add(this.bottomRightLabel);
             this.bottomRightPanel.Location = new System.Drawing.Point(543, 308);
             this.bottomRightPanel.Name = "bottomRightPanel";
             this.bottomRightPanel.Size = new System.Drawing.Size(260, 144);
             this.bottomRightPanel.TabIndex = 2;
+            this.bottomRightPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.bottomRightPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // bottomRightLabel
+            // 
+            this.bottomRightLabel.ContextMenuStrip = this.contextMenu;
+            this.bottomRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bottomRightLabel.Location = new System.Drawing.Point(3, 14);
+            this.bottomRightLabel.Name = "bottomRightLabel";
+            this.bottomRightLabel.Size = new System.Drawing.Size(254, 129);
+            this.bottomRightLabel.TabIndex = 14;
+            this.bottomRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomRightLabel.UseMnemonic = false;
+            this.bottomRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настроитьТекстToolStripMenuItem,
+            this.картинкаToolStripMenuItem});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(126, 48);
+            // 
+            // настроитьТекстToolStripMenuItem
+            // 
+            this.настроитьТекстToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настроитьТекстToolStripMenuItem1,
+            this.add,
+            this.del});
+            this.настроитьТекстToolStripMenuItem.Name = "настроитьТекстToolStripMenuItem";
+            this.настроитьТекстToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.настроитьТекстToolStripMenuItem.Text = "Текст";
+            // 
+            // настроитьТекстToolStripMenuItem1
+            // 
+            this.настроитьТекстToolStripMenuItem1.Name = "настроитьТекстToolStripMenuItem1";
+            this.настроитьТекстToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.настроитьТекстToolStripMenuItem1.Text = "Настроить текст";
+            this.настроитьТекстToolStripMenuItem1.Click += new System.EventHandler(this.настроитьТекстToolStripMenuItem1_Click);
+            // 
+            // add
+            // 
+            this.add.CheckOnClick = true;
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(163, 22);
+            this.add.Text = "&Добавить сюда";
+            this.add.CheckedChanged += new System.EventHandler(this.add_CheckedChanged);
+            // 
+            // del
+            // 
+            this.del.CheckOnClick = true;
+            this.del.Name = "del";
+            this.del.Size = new System.Drawing.Size(163, 22);
+            this.del.Text = "Удалить";
+            this.del.CheckedChanged += new System.EventHandler(this.del_CheckedChanged);
+            // 
+            // картинкаToolStripMenuItem
+            // 
+            this.картинкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.увеличитьToolStripMenuItem,
+            this.уменьшитьToolStripMenuItem});
+            this.картинкаToolStripMenuItem.Name = "картинкаToolStripMenuItem";
+            this.картинкаToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.картинкаToolStripMenuItem.Text = "Картинка";
+            // 
+            // увеличитьToolStripMenuItem
+            // 
+            this.увеличитьToolStripMenuItem.Name = "увеличитьToolStripMenuItem";
+            this.увеличитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.увеличитьToolStripMenuItem.Text = "Увеличить";
+            // 
+            // уменьшитьToolStripMenuItem
+            // 
+            this.уменьшитьToolStripMenuItem.Name = "уменьшитьToolStripMenuItem";
+            this.уменьшитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.уменьшитьToolStripMenuItem.Text = "Уменьшить";
             // 
             // centerRightPanel
             // 
+            this.centerRightPanel.AllowDrop = true;
             this.centerRightPanel.BackColor = System.Drawing.Color.Transparent;
             this.centerRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.centerRightPanel.Controls.Add(this.MiddleRightLabel);
             this.centerRightPanel.Location = new System.Drawing.Point(543, 153);
             this.centerRightPanel.Name = "centerRightPanel";
             this.centerRightPanel.Size = new System.Drawing.Size(260, 144);
             this.centerRightPanel.TabIndex = 2;
+            this.centerRightPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.centerRightPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // MiddleRightLabel
+            // 
+            this.MiddleRightLabel.ContextMenuStrip = this.contextMenu;
+            this.MiddleRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MiddleRightLabel.Location = new System.Drawing.Point(3, 25);
+            this.MiddleRightLabel.Name = "MiddleRightLabel";
+            this.MiddleRightLabel.Size = new System.Drawing.Size(254, 118);
+            this.MiddleRightLabel.TabIndex = 14;
+            this.MiddleRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MiddleRightLabel.UseMnemonic = false;
+            this.MiddleRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // midleCenterPanel
             // 
+            this.midleCenterPanel.AllowDrop = true;
             this.midleCenterPanel.BackColor = System.Drawing.Color.Transparent;
             this.midleCenterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.midleCenterPanel.Controls.Add(this.centerMiddleLabel);
             this.midleCenterPanel.Location = new System.Drawing.Point(273, 153);
             this.midleCenterPanel.Name = "midleCenterPanel";
             this.midleCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.midleCenterPanel.TabIndex = 2;
+            this.midleCenterPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.midleCenterPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // centerMiddleLabel
+            // 
+            this.centerMiddleLabel.ContextMenuStrip = this.contextMenu;
+            this.centerMiddleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.centerMiddleLabel.Location = new System.Drawing.Point(3, 25);
+            this.centerMiddleLabel.Name = "centerMiddleLabel";
+            this.centerMiddleLabel.Size = new System.Drawing.Size(254, 118);
+            this.centerMiddleLabel.TabIndex = 14;
+            this.centerMiddleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.centerMiddleLabel.UseMnemonic = false;
+            this.centerMiddleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // bottomCenterPanel
             // 
+            this.bottomCenterPanel.AllowDrop = true;
             this.bottomCenterPanel.BackColor = System.Drawing.Color.Transparent;
             this.bottomCenterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomCenterPanel.Controls.Add(this.bottomMiddleLabel);
             this.bottomCenterPanel.Location = new System.Drawing.Point(273, 308);
             this.bottomCenterPanel.Name = "bottomCenterPanel";
             this.bottomCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.bottomCenterPanel.TabIndex = 2;
+            this.bottomCenterPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.bottomCenterPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // bottomMiddleLabel
+            // 
+            this.bottomMiddleLabel.ContextMenuStrip = this.contextMenu;
+            this.bottomMiddleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bottomMiddleLabel.Location = new System.Drawing.Point(3, 14);
+            this.bottomMiddleLabel.Name = "bottomMiddleLabel";
+            this.bottomMiddleLabel.Size = new System.Drawing.Size(254, 129);
+            this.bottomMiddleLabel.TabIndex = 14;
+            this.bottomMiddleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomMiddleLabel.UseMnemonic = false;
+            this.bottomMiddleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // bottomLeftPanel
             // 
+            this.bottomLeftPanel.AllowDrop = true;
             this.bottomLeftPanel.BackColor = System.Drawing.Color.Transparent;
             this.bottomLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomLeftPanel.Controls.Add(this.bottomLeftLabel);
             this.bottomLeftPanel.Location = new System.Drawing.Point(3, 308);
             this.bottomLeftPanel.Name = "bottomLeftPanel";
             this.bottomLeftPanel.Size = new System.Drawing.Size(260, 144);
             this.bottomLeftPanel.TabIndex = 2;
+            this.bottomLeftPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.bottomLeftPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // bottomLeftLabel
+            // 
+            this.bottomLeftLabel.ContextMenuStrip = this.contextMenu;
+            this.bottomLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bottomLeftLabel.Location = new System.Drawing.Point(3, 14);
+            this.bottomLeftLabel.Name = "bottomLeftLabel";
+            this.bottomLeftLabel.Size = new System.Drawing.Size(254, 129);
+            this.bottomLeftLabel.TabIndex = 14;
+            this.bottomLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomLeftLabel.UseMnemonic = false;
+            this.bottomLeftLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // midleLeftPanel
             // 
+            this.midleLeftPanel.AllowDrop = true;
             this.midleLeftPanel.BackColor = System.Drawing.Color.Transparent;
             this.midleLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.midleLeftPanel.Controls.Add(this.centerLeftLabel);
             this.midleLeftPanel.Location = new System.Drawing.Point(3, 153);
             this.midleLeftPanel.Name = "midleLeftPanel";
             this.midleLeftPanel.Size = new System.Drawing.Size(260, 144);
             this.midleLeftPanel.TabIndex = 2;
+            this.midleLeftPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.midleLeftPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // centerLeftLabel
+            // 
+            this.centerLeftLabel.ContextMenuStrip = this.contextMenu;
+            this.centerLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.centerLeftLabel.Location = new System.Drawing.Point(3, 25);
+            this.centerLeftLabel.Name = "centerLeftLabel";
+            this.centerLeftLabel.Size = new System.Drawing.Size(254, 118);
+            this.centerLeftLabel.TabIndex = 14;
+            this.centerLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.centerLeftLabel.UseMnemonic = false;
+            this.centerLeftLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // topRightPanel
             // 
+            this.topRightPanel.AllowDrop = true;
             this.topRightPanel.BackColor = System.Drawing.Color.Transparent;
             this.topRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.topRightPanel.Controls.Add(this.topRightLabel);
             this.topRightPanel.Location = new System.Drawing.Point(543, 3);
             this.topRightPanel.Name = "topRightPanel";
             this.topRightPanel.Size = new System.Drawing.Size(260, 144);
             this.topRightPanel.TabIndex = 1;
+            this.topRightPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.topRightPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // topRightLabel
+            // 
+            this.topRightLabel.ContextMenuStrip = this.contextMenu;
+            this.topRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.topRightLabel.Location = new System.Drawing.Point(3, 23);
+            this.topRightLabel.Name = "topRightLabel";
+            this.topRightLabel.Size = new System.Drawing.Size(254, 120);
+            this.topRightLabel.TabIndex = 14;
+            this.topRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.topRightLabel.UseMnemonic = false;
+            this.topRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // topLeftPanel
             // 
+            this.topLeftPanel.AllowDrop = true;
             this.topLeftPanel.BackColor = System.Drawing.Color.Transparent;
             this.topLeftPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.topLeftPanel.Controls.Add(this.topLeftLabel);
             this.topLeftPanel.Location = new System.Drawing.Point(3, 3);
             this.topLeftPanel.Name = "topLeftPanel";
             this.topLeftPanel.Size = new System.Drawing.Size(260, 144);
             this.topLeftPanel.TabIndex = 1;
+            this.topLeftPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.topLeftPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // topLeftLabel
+            // 
+            this.topLeftLabel.ContextMenuStrip = this.contextMenu;
+            this.topLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.topLeftLabel.Location = new System.Drawing.Point(3, 23);
+            this.topLeftLabel.Name = "topLeftLabel";
+            this.topLeftLabel.Size = new System.Drawing.Size(254, 120);
+            this.topLeftLabel.TabIndex = 13;
+            this.topLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.topLeftLabel.UseMnemonic = false;
+            this.topLeftLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // topCenterPanel
             // 
+            this.topCenterPanel.AllowDrop = true;
             this.topCenterPanel.BackColor = System.Drawing.Color.Transparent;
             this.topCenterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.topCenterPanel.Controls.Add(this.topMiddleLabel);
             this.topCenterPanel.Location = new System.Drawing.Point(273, 3);
             this.topCenterPanel.Name = "topCenterPanel";
             this.topCenterPanel.Size = new System.Drawing.Size(260, 144);
             this.topCenterPanel.TabIndex = 0;
+            this.topCenterPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.topCenterPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // topMiddleLabel
+            // 
+            this.topMiddleLabel.ContextMenuStrip = this.contextMenu;
+            this.topMiddleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.topMiddleLabel.Location = new System.Drawing.Point(3, 23);
+            this.topMiddleLabel.Name = "topMiddleLabel";
+            this.topMiddleLabel.Size = new System.Drawing.Size(254, 120);
+            this.topMiddleLabel.TabIndex = 14;
+            this.topMiddleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.topMiddleLabel.UseMnemonic = false;
+            this.topMiddleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // componentsPanel
             // 
@@ -209,9 +436,8 @@
             // 
             // elementsPicLabel
             // 
-            this.elementsPicLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.elementsPicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsPicLabel.Location = new System.Drawing.Point(0, 0);
+            this.elementsPicLabel.Location = new System.Drawing.Point(-1, 0);
             this.elementsPicLabel.Name = "elementsPicLabel";
             this.elementsPicLabel.Size = new System.Drawing.Size(223, 142);
             this.elementsPicLabel.TabIndex = 12;
@@ -233,7 +459,6 @@
             // 
             // elementsTextLabel
             // 
-            this.elementsTextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.elementsTextLabel.Location = new System.Drawing.Point(0, 0);
             this.elementsTextLabel.Name = "elementsTextLabel";
@@ -256,50 +481,6 @@
             this.textBox1.TabIndex = 12;
             this.textBox1.ContextMenuStripChanged += new System.EventHandler(this.textBox1_ContextMenuStripChanged);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // contextMenu
-            // 
-            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настроитьТекстToolStripMenuItem,
-            this.картинкаToolStripMenuItem});
-            this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(126, 48);
-            // 
-            // настроитьТекстToolStripMenuItem
-            // 
-            this.настроитьТекстToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настроитьТекстToolStripMenuItem1});
-            this.настроитьТекстToolStripMenuItem.Name = "настроитьТекстToolStripMenuItem";
-            this.настроитьТекстToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.настроитьТекстToolStripMenuItem.Text = "Текст";
-            // 
-            // настроитьТекстToolStripMenuItem1
-            // 
-            this.настроитьТекстToolStripMenuItem1.Name = "настроитьТекстToolStripMenuItem1";
-            this.настроитьТекстToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.настроитьТекстToolStripMenuItem1.Text = "Настроить текст";
-            this.настроитьТекстToolStripMenuItem1.Click += new System.EventHandler(this.настроитьТекстToolStripMenuItem1_Click);
-            // 
-            // картинкаToolStripMenuItem
-            // 
-            this.картинкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.увеличитьToolStripMenuItem,
-            this.уменьшитьToolStripMenuItem});
-            this.картинкаToolStripMenuItem.Name = "картинкаToolStripMenuItem";
-            this.картинкаToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.картинкаToolStripMenuItem.Text = "Картинка";
-            // 
-            // увеличитьToolStripMenuItem
-            // 
-            this.увеличитьToolStripMenuItem.Name = "увеличитьToolStripMenuItem";
-            this.увеличитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.увеличитьToolStripMenuItem.Text = "Увеличить";
-            // 
-            // уменьшитьToolStripMenuItem
-            // 
-            this.уменьшитьToolStripMenuItem.Name = "уменьшитьToolStripMenuItem";
-            this.уменьшитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.уменьшитьToolStripMenuItem.Text = "Уменьшить";
             // 
             // musicPanel
             // 
@@ -393,7 +574,7 @@
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveButton.Location = new System.Drawing.Point(135, 12);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(164, 43);
+            this.saveButton.Size = new System.Drawing.Size(164, 60);
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -402,12 +583,13 @@
             // openProjektButton
             // 
             this.openProjektButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.openProjektButton.Location = new System.Drawing.Point(437, 12);
+            this.openProjektButton.Location = new System.Drawing.Point(517, 12);
             this.openProjektButton.Name = "openProjektButton";
-            this.openProjektButton.Size = new System.Drawing.Size(170, 43);
+            this.openProjektButton.Size = new System.Drawing.Size(170, 60);
             this.openProjektButton.TabIndex = 4;
             this.openProjektButton.Text = "Открыть проект";
             this.openProjektButton.UseVisualStyleBackColor = true;
+            this.openProjektButton.Click += new System.EventHandler(this.openProjektButton_Click);
             // 
             // postcardLabel
             // 
@@ -504,11 +686,22 @@
             // 
             this.dataColumn2.ColumnName = "SettingValue";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(327, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 60);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Сохранить проектом";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 725);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.volumeScroll);
             this.Controls.Add(this.stopButton);
@@ -527,11 +720,20 @@
             this.Text = "PostcardsGenerator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.postcardPanel.ResumeLayout(false);
+            this.bottomRightPanel.ResumeLayout(false);
+            this.contextMenu.ResumeLayout(false);
+            this.centerRightPanel.ResumeLayout(false);
+            this.midleCenterPanel.ResumeLayout(false);
+            this.bottomCenterPanel.ResumeLayout(false);
+            this.bottomLeftPanel.ResumeLayout(false);
+            this.midleLeftPanel.ResumeLayout(false);
+            this.topRightPanel.ResumeLayout(false);
+            this.topLeftPanel.ResumeLayout(false);
+            this.topCenterPanel.ResumeLayout(false);
             this.componentsPanel.ResumeLayout(false);
             this.picturePanel.ResumeLayout(false);
             this.textPanel.ResumeLayout(false);
             this.textPanel.PerformLayout();
-            this.contextMenu.ResumeLayout(false);
             this.musicPanel.ResumeLayout(false);
             this.postcardTemplatePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.volumeScroll)).EndInit();
@@ -587,6 +789,18 @@
         private System.Data.DataTable dataTable1;
         private System.Data.DataColumn dataColumn1;
         private System.Data.DataColumn dataColumn2;
+        private System.Windows.Forms.Label topLeftLabel;
+        private System.Windows.Forms.Label bottomRightLabel;
+        private System.Windows.Forms.Label MiddleRightLabel;
+        private System.Windows.Forms.Label centerMiddleLabel;
+        private System.Windows.Forms.Label bottomMiddleLabel;
+        private System.Windows.Forms.Label bottomLeftLabel;
+        private System.Windows.Forms.Label centerLeftLabel;
+        private System.Windows.Forms.Label topRightLabel;
+        private System.Windows.Forms.Label topMiddleLabel;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem add;
+        private System.Windows.Forms.ToolStripMenuItem del;
     }
 }
 

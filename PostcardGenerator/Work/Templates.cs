@@ -11,8 +11,10 @@ namespace PostcardGenerator
 {
     static class Templates
     {
-       public static List<Panel> panels = new List<Panel>();
-       public static List<Image> images = new List<Image>();
+       public static List<Panel> templatePanels = new List<Panel>();
+        public static List<Panel> postcardPanels = new List<Panel>();
+        public static List<Label> postcardLabelss = new List<Label>();
+        public static List<Image> images = new List<Image>();
 
         public static void Load()
         {
@@ -21,7 +23,7 @@ namespace PostcardGenerator
             for (int i = 0; i < files.Length; i++)
             {
                 images.Add(new Bitmap(files[i]));
-                panels[i].BackgroundImage = images[i];
+                templatePanels[i].BackgroundImage = images[i];
             }
         }
 
@@ -29,9 +31,9 @@ namespace PostcardGenerator
         {
             for (int i = 0; i < images.Count; i++)
             {
-                if (panels[i].Name == ((Panel)sender).Name)
+                if (templatePanels[i].Name == ((Panel)sender).Name)
                 {
-                    postcardPanel.BackgroundImage = panels[i].BackgroundImage;
+                    postcardPanel.BackgroundImage = templatePanels[i].BackgroundImage;
                     
                 }
 

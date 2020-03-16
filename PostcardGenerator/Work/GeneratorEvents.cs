@@ -29,7 +29,7 @@ namespace PostcardGenerator.Work
             this.textBox = textBox;
         }
   
-        public void picturePanel_DragDropEvent(DragEventArgs e)
+        public void picturePanel_DragDropEvent(object sender,DragEventArgs e)
         {           
             try
             {
@@ -44,7 +44,7 @@ namespace PostcardGenerator.Work
                     {
                         if (format == imageFormats[i])
                         {
-                            ImageFormat(path);
+                            ImageFormat((Panel)sender,path);
                             break;
                         }
                         if (musicFormats[i] == format)
@@ -75,10 +75,18 @@ namespace PostcardGenerator.Work
             }
         }
 
-
-        private void ImageFormat(string path)
+        public void TextFormat(Label sender, bool pressed)
         {
-            elementPanel.BackgroundImage = new Bitmap(path);
+            if (pressed)          
+                sender.Text = textBox.Text;
+            else
+                sender.Text = null;
+        }
+
+        private void ImageFormat(Panel sender,string path)
+        {
+            
+            sender.BackgroundImage = new Bitmap(path);
             elementLabel.Visible = false;           
         }
 
