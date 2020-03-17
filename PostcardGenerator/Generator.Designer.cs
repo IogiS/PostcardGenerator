@@ -72,14 +72,17 @@
             this.postcardLabel = new System.Windows.Forms.Label();
             this.postcardElementsLabel = new System.Windows.Forms.Label();
             this.templatePostcardLabel = new System.Windows.Forms.Label();
-            this.stopButton = new System.Windows.Forms.Button();
-            this.playButton = new System.Windows.Forms.Button();
             this.volumeScroll = new System.Windows.Forms.TrackBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataSet1 = new System.Data.DataSet();
             this.dataTable1 = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
             this.dataColumn2 = new System.Data.DataColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.postcardPanel.SuspendLayout();
             this.bottomRightPanel.SuspendLayout();
             this.contextMenu.SuspendLayout();
@@ -105,6 +108,7 @@
             // 
             this.postcardPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.postcardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.postcardPanel.ContextMenuStrip = this.contextMenu;
             this.postcardPanel.Controls.Add(this.bottomRightPanel);
             this.postcardPanel.Controls.Add(this.centerRightPanel);
             this.postcardPanel.Controls.Add(this.midleCenterPanel);
@@ -114,7 +118,7 @@
             this.postcardPanel.Controls.Add(this.topRightPanel);
             this.postcardPanel.Controls.Add(this.topLeftPanel);
             this.postcardPanel.Controls.Add(this.topCenterPanel);
-            this.postcardPanel.Location = new System.Drawing.Point(12, 97);
+            this.postcardPanel.Location = new System.Drawing.Point(21, 131);
             this.postcardPanel.Name = "postcardPanel";
             this.postcardPanel.Size = new System.Drawing.Size(808, 457);
             this.postcardPanel.TabIndex = 0;
@@ -390,7 +394,7 @@
             this.componentsPanel.Controls.Add(this.picturePanel);
             this.componentsPanel.Controls.Add(this.textPanel);
             this.componentsPanel.Controls.Add(this.musicPanel);
-            this.componentsPanel.Location = new System.Drawing.Point(826, 97);
+            this.componentsPanel.Location = new System.Drawing.Point(835, 131);
             this.componentsPanel.Name = "componentsPanel";
             this.componentsPanel.Size = new System.Drawing.Size(233, 457);
             this.componentsPanel.TabIndex = 1;
@@ -411,7 +415,7 @@
             // elementsPicLabel
             // 
             this.elementsPicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsPicLabel.Location = new System.Drawing.Point(-1, 0);
+            this.elementsPicLabel.Location = new System.Drawing.Point(-4, 1);
             this.elementsPicLabel.Name = "elementsPicLabel";
             this.elementsPicLabel.Size = new System.Drawing.Size(223, 142);
             this.elementsPicLabel.TabIndex = 12;
@@ -434,7 +438,7 @@
             // elementsTextLabel
             // 
             this.elementsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.elementsTextLabel.Location = new System.Drawing.Point(0, 0);
+            this.elementsTextLabel.Location = new System.Drawing.Point(3, 6);
             this.elementsTextLabel.Name = "elementsTextLabel";
             this.elementsTextLabel.Size = new System.Drawing.Size(223, 142);
             this.elementsTextLabel.TabIndex = 11;
@@ -444,13 +448,14 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.ContextMenuStrip = this.contextMenu;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.MaximumSize = new System.Drawing.Size(223, 142);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(223, 142);
             this.textBox1.TabIndex = 12;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -487,7 +492,7 @@
             this.postcardTemplatePanel.Controls.Add(this.templatePanel3);
             this.postcardTemplatePanel.Controls.Add(this.templatePanel2);
             this.postcardTemplatePanel.Controls.Add(this.templatePanel1);
-            this.postcardTemplatePanel.Location = new System.Drawing.Point(12, 588);
+            this.postcardTemplatePanel.Location = new System.Drawing.Point(21, 622);
             this.postcardTemplatePanel.Name = "postcardTemplatePanel";
             this.postcardTemplatePanel.Size = new System.Drawing.Size(1047, 125);
             this.postcardTemplatePanel.TabIndex = 2;
@@ -544,31 +549,37 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.SystemColors.GrayText;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveButton.Location = new System.Drawing.Point(208, 12);
+            this.saveButton.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.saveButton.Location = new System.Drawing.Point(217, 46);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(164, 60);
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Сохранить";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // openProjektButton
             // 
+            this.openProjektButton.BackColor = System.Drawing.SystemColors.GrayText;
+            this.openProjektButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openProjektButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.openProjektButton.Location = new System.Drawing.Point(488, 12);
+            this.openProjektButton.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.openProjektButton.Location = new System.Drawing.Point(497, 46);
             this.openProjektButton.Name = "openProjektButton";
             this.openProjektButton.Size = new System.Drawing.Size(170, 60);
             this.openProjektButton.TabIndex = 4;
             this.openProjektButton.Text = "Открыть проект";
-            this.openProjektButton.UseVisualStyleBackColor = true;
+            this.openProjektButton.UseVisualStyleBackColor = false;
             this.openProjektButton.Click += new System.EventHandler(this.openProjektButton_Click);
             // 
             // postcardLabel
             // 
             this.postcardLabel.AutoSize = true;
             this.postcardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postcardLabel.Location = new System.Drawing.Point(8, 70);
+            this.postcardLabel.Location = new System.Drawing.Point(17, 104);
             this.postcardLabel.Name = "postcardLabel";
             this.postcardLabel.Size = new System.Drawing.Size(97, 24);
             this.postcardLabel.TabIndex = 0;
@@ -578,7 +589,7 @@
             // 
             this.postcardElementsLabel.AutoSize = true;
             this.postcardElementsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.postcardElementsLabel.Location = new System.Drawing.Point(826, 68);
+            this.postcardElementsLabel.Location = new System.Drawing.Point(835, 102);
             this.postcardElementsLabel.Name = "postcardElementsLabel";
             this.postcardElementsLabel.Size = new System.Drawing.Size(102, 24);
             this.postcardElementsLabel.TabIndex = 5;
@@ -588,37 +599,15 @@
             // 
             this.templatePostcardLabel.AutoSize = true;
             this.templatePostcardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.templatePostcardLabel.Location = new System.Drawing.Point(8, 559);
+            this.templatePostcardLabel.Location = new System.Drawing.Point(17, 593);
             this.templatePostcardLabel.Name = "templatePostcardLabel";
             this.templatePostcardLabel.Size = new System.Drawing.Size(179, 24);
             this.templatePostcardLabel.TabIndex = 6;
             this.templatePostcardLabel.Text = "Шаблоны открыток";
             // 
-            // stopButton
-            // 
-            this.stopButton.BackgroundImage = global::PostcardGenerator.Properties.Resources.Media_Controls_Stop_icon;
-            this.stopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.stopButton.Location = new System.Drawing.Point(886, 10);
-            this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(50, 50);
-            this.stopButton.TabIndex = 8;
-            this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
-            // 
-            // playButton
-            // 
-            this.playButton.BackgroundImage = global::PostcardGenerator.Properties.Resources._1200px_Stylingbar_point_right_svg;
-            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.playButton.Location = new System.Drawing.Point(774, 10);
-            this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(50, 50);
-            this.playButton.TabIndex = 7;
-            this.playButton.UseVisualStyleBackColor = true;
-            this.playButton.Click += new System.EventHandler(this.playButton_Click);
-            // 
             // volumeScroll
             // 
-            this.volumeScroll.Location = new System.Drawing.Point(942, 15);
+            this.volumeScroll.Location = new System.Drawing.Point(951, 58);
             this.volumeScroll.Maximum = 100;
             this.volumeScroll.Name = "volumeScroll";
             this.volumeScroll.Size = new System.Drawing.Size(104, 45);
@@ -626,17 +615,6 @@
             this.volumeScroll.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.volumeScroll.Value = 50;
             this.volumeScroll.Scroll += new System.EventHandler(this.volumeScroll_Scroll);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::PostcardGenerator.Properties.Resources.pause36;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(830, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataSet1
             // 
@@ -659,11 +637,90 @@
             // 
             this.dataColumn2.ColumnName = "SettingValue";
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button4.BackgroundImage = global::PostcardGenerator.Properties.Resources.arrow_down1;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button4.Location = new System.Drawing.Point(995, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(33, 33);
+            this.button4.TabIndex = 13;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.BackgroundImage = global::PostcardGenerator.Properties.Resources.cancel1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button2.Location = new System.Drawing.Point(1043, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 33);
+            this.button2.TabIndex = 11;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button1.BackgroundImage = global::PostcardGenerator.Properties.Resources.pause36;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(839, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // stopButton
+            // 
+            this.stopButton.BackColor = System.Drawing.SystemColors.GrayText;
+            this.stopButton.BackgroundImage = global::PostcardGenerator.Properties.Resources.Media_Controls_Stop_icon;
+            this.stopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.stopButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stopButton.Location = new System.Drawing.Point(895, 49);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(50, 50);
+            this.stopButton.TabIndex = 8;
+            this.stopButton.UseVisualStyleBackColor = false;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            // 
+            // playButton
+            // 
+            this.playButton.BackColor = System.Drawing.SystemColors.GrayText;
+            this.playButton.BackgroundImage = global::PostcardGenerator.Properties.Resources._1200px_Stylingbar_point_right_svg;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.playButton.Location = new System.Drawing.Point(783, 49);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(50, 50);
+            this.playButton.TabIndex = 7;
+            this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkViolet;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 763);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1088, 13);
+            this.panel1.TabIndex = 14;
+            // 
             // Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 725);
+            this.BackColor = System.Drawing.SystemColors.Desktop;
+            this.ClientSize = new System.Drawing.Size(1088, 776);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.volumeScroll);
             this.Controls.Add(this.stopButton);
@@ -676,11 +733,14 @@
             this.Controls.Add(this.postcardTemplatePanel);
             this.Controls.Add(this.componentsPanel);
             this.Controls.Add(this.postcardPanel);
-            this.MaximumSize = new System.Drawing.Size(1088, 764);
-            this.MinimumSize = new System.Drawing.Size(1088, 764);
+            this.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1088, 776);
+            this.MinimumSize = new System.Drawing.Size(1088, 776);
             this.Name = "Generator";
             this.Text = "PostcardsGenerator";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Generator_MouseDown);
             this.postcardPanel.ResumeLayout(false);
             this.bottomRightPanel.ResumeLayout(false);
             this.contextMenu.ResumeLayout(false);
@@ -759,6 +819,9 @@
         private System.Windows.Forms.Label topMiddleLabel;
         private System.Windows.Forms.ToolStripMenuItem add;
         private System.Windows.Forms.ToolStripMenuItem del;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
