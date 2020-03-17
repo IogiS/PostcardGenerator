@@ -1,20 +1,13 @@
-﻿using PostcardGenerator.Properties;
-using PostcardGenerator.Work;
+﻿using PostcardGenerator.Work;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using System.IO;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
-using System.Windows;
+using Newtonsoft.Json;
 
 namespace PostcardGenerator
 {
@@ -22,8 +15,7 @@ namespace PostcardGenerator
     {
         System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
         GeneratorEvents events;
-        public bool addPressed { get; set; }
-        public bool delPressed { get; set; }
+
         public Generator()
         {
             InitializeComponent();
@@ -69,81 +61,56 @@ namespace PostcardGenerator
             }
         }
 
-        private void textBox1_ContextMenuStripChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void saveButton_Click(object sender, EventArgs e)
         {
             searchImagesInPanels();
             //Save();
         }
 
-        private void Save()
+
+        private byte[] convertToByteArray(Image image)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "JSON files(*.json)|*.json";
-            ofd.ShowDialog();
+            System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+            image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+            byte[] b = memoryStream.ToArray();
 
-            string path = ofd.FileName;
-
-            SavingSettings setting = new SavingSettings() { SettingName = "Tom", SettingValue = "35", SettingImage = postcardPanel.BackgroundImage.Clone() };
-
-            List<SavingSettings> savingSettings = new List<SavingSettings>();
-            File.WriteAllText("settings.json", JsonConvert.SerializeObject(setting));
-
-
-
-
-
-
-            elementsPicLabel.Visible = false;
-
+            return b;
         }
-
 
         public void searchImagesInPanels()
         {
             Image mainImage = postcardPanel.BackgroundImage;
             mainImage = ResizeImage(mainImage, postcardPanel.Width, postcardPanel.Height);
             Graphics g = Graphics.FromImage(mainImage);
+            byte[] a = new byte[0];
+            Saving.addPropertiesLabels(convertToByteArray(postcardPanel.BackgroundImage), "postcardPanel", "", "Panel", postcardPanel.Font, postcardPanel.ForeColor); ;
+
             for (int i = 0; i < Templates.postcardPanels.Count(); i++)
             {
                 if (Templates.postcardPanels[i].BackgroundImage != null)
                 {
                     Image background = Templates.postcardPanels[i].BackgroundImage;
                     g.DrawImage(ResizeImage(background, Templates.postcardPanels[i].Size.Width, Templates.postcardPanels[i].Size.Height),
-                        Templates.postcardPanels[i].Location.X, Templates.postcardPanels[i].Location.Y);
+                    Templates.postcardPanels[i].Location.X, Templates.postcardPanels[i].Location.Y);
 
-
+                    Saving.addPropertiesLabels(convertToByteArray(background), Templates.postcardPanels[i].Name, "", "Panel" , Templates.postcardPanels[i].Font, Templates.postcardPanels[i].ForeColor);
                 }
+
                 if (Templates.postcardLabelss[i].Text != null)
                 {
-                    Font drawFont = new Font("Arial", 16);
-                    SolidBrush drawBrush = new SolidBrush(Color.Black);
-                    g.DrawString(Templates.postcardLabelss[i].Text, drawFont, drawBrush, Templates.postcardPanels[i].Location.X, Templates.postcardPanels[i].Location.Y);
-
+                    a = new byte[0];
+                    SolidBrush drawBrush = new SolidBrush(TextSettings.color);
+                    g.DrawString(Templates.postcardLabelss[i].Text, TextSettings.font, drawBrush, Templates.postcardPanels[i].Location.X + Templates.postcardPanels[i].Width / 2, Templates.postcardPanels[i].Location.Y + Templates.postcardPanels[i].Height / 2);
+                    Saving.addPropertiesLabels(a, Templates.postcardLabelss[i].Name, Templates.postcardLabelss[i].Text, "Label", Templates.postcardLabelss[i].Font, Templates.postcardLabelss[i].ForeColor);
                 }
             }
+            Saving.save();
             mainImage.Save(@"C:\Users\LogiS\Desktop\main.png", ImageFormat.Png);
         }
 
         private void topRightPanel_DragDrop(object sender, System.Windows.Forms.DragEventArgs e) => events.picturePanel_DragDropEvent(sender, e);
 
-
-
         private void topRightPanel_DragEnter(object sender, System.Windows.Forms.DragEventArgs e) => events.elementsPanels_DragEnterEvent(sender, e);
-
-        private void openProjektButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
-
         public Bitmap ResizeImage(Image image, int width, int height)
         {
             var destRect = new Rectangle(0, 0, width, height);
@@ -169,7 +136,6 @@ namespace PostcardGenerator
             return destImage;
         }
 
-
         private void topMiddleLabel_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -192,9 +158,62 @@ namespace PostcardGenerator
             ToolStripMenuItem tlm = (sender) as ToolStripMenuItem;
             del.Checked = !tlm.Checked;
         }
+
+
+        private void openProjektButton_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "JSON files(*.json)|*.json";
+            ofd.ShowDialog();
+
+            var settings = File.ReadAllLines(ofd.FileName);
+            foreach (var item in settings)
+            {
+                var items = JsonConvert.DeserializeObject<SavingSettings>(item);
+
+                for (int i = 0; i < settings.Length; i++)
+                {
+                    if (items.SettingName == "postcardPanel")
+                    {
+                        MemoryStream memoryStream1 = new System.IO.MemoryStream();
+                        foreach (byte b1 in items.SettingImage) memoryStream1.WriteByte(b1);
+                        Image image1 = Image.FromStream(memoryStream1);
+                        postcardPanel.BackgroundImage = image1;
+
+                    }
+                }
+                for (int i = 0; i < Templates.postcardLabelss.Count(); i++)
+                {
+                    if (Templates.postcardLabelss[i].Name == items.SettingName)
+                    {
+                        Templates.postcardLabelss[i].Text = items.SettingValue;
+                        Templates.postcardLabelss[i].Font = items.Font;
+                        Templates.postcardLabelss[i].ForeColor = items.Color;
+
+                        break;
+                    }
+                    if (Templates.postcardPanels[i].Name == items.SettingName)
+                    {
+                        MemoryStream memoryStream1 = new System.IO.MemoryStream();
+                        if (items.SettingImage != null)
+                        {
+
+                            foreach (byte b1 in items.SettingImage) memoryStream1.WriteByte(b1);
+                            Image image1 = Image.FromStream(memoryStream1);
+
+                            Templates.postcardPanels[i].BackgroundImage = image1;
+                            break;
+                        }
+                    }
+
+                }
+            }
+
+            
+        }
+
+
+
     }
-
-
-
-
 }

@@ -37,9 +37,6 @@
             this.настроитьТекстToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.add = new System.Windows.Forms.ToolStripMenuItem();
             this.del = new System.Windows.Forms.ToolStripMenuItem();
-            this.картинкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.увеличитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.уменьшитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.centerRightPanel = new System.Windows.Forms.Panel();
             this.MiddleRightLabel = new System.Windows.Forms.Label();
             this.midleCenterPanel = new System.Windows.Forms.Panel();
@@ -83,7 +80,6 @@
             this.dataTable1 = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
             this.dataColumn2 = new System.Data.DataColumn();
-            this.button2 = new System.Windows.Forms.Button();
             this.postcardPanel.SuspendLayout();
             this.bottomRightPanel.SuspendLayout();
             this.contextMenu.SuspendLayout();
@@ -143,7 +139,7 @@
             this.bottomRightLabel.Location = new System.Drawing.Point(3, 14);
             this.bottomRightLabel.Name = "bottomRightLabel";
             this.bottomRightLabel.Size = new System.Drawing.Size(254, 129);
-            this.bottomRightLabel.TabIndex = 14;
+            this.bottomRightLabel.TabIndex = 22;
             this.bottomRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bottomRightLabel.UseMnemonic = false;
             this.bottomRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -151,10 +147,9 @@
             // contextMenu
             // 
             this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настроитьТекстToolStripMenuItem,
-            this.картинкаToolStripMenuItem});
+            this.настроитьТекстToolStripMenuItem});
             this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(126, 48);
+            this.contextMenu.Size = new System.Drawing.Size(104, 26);
             // 
             // настроитьТекстToolStripMenuItem
             // 
@@ -163,7 +158,7 @@
             this.add,
             this.del});
             this.настроитьТекстToolStripMenuItem.Name = "настроитьТекстToolStripMenuItem";
-            this.настроитьТекстToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.настроитьТекстToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.настроитьТекстToolStripMenuItem.Text = "Текст";
             // 
             // настроитьТекстToolStripMenuItem1
@@ -189,27 +184,6 @@
             this.del.Text = "Удалить";
             this.del.CheckedChanged += new System.EventHandler(this.del_CheckedChanged);
             // 
-            // картинкаToolStripMenuItem
-            // 
-            this.картинкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.увеличитьToolStripMenuItem,
-            this.уменьшитьToolStripMenuItem});
-            this.картинкаToolStripMenuItem.Name = "картинкаToolStripMenuItem";
-            this.картинкаToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.картинкаToolStripMenuItem.Text = "Картинка";
-            // 
-            // увеличитьToolStripMenuItem
-            // 
-            this.увеличитьToolStripMenuItem.Name = "увеличитьToolStripMenuItem";
-            this.увеличитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.увеличитьToolStripMenuItem.Text = "Увеличить";
-            // 
-            // уменьшитьToolStripMenuItem
-            // 
-            this.уменьшитьToolStripMenuItem.Name = "уменьшитьToolStripMenuItem";
-            this.уменьшитьToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.уменьшитьToolStripMenuItem.Text = "Уменьшить";
-            // 
             // centerRightPanel
             // 
             this.centerRightPanel.AllowDrop = true;
@@ -230,7 +204,7 @@
             this.MiddleRightLabel.Location = new System.Drawing.Point(3, 25);
             this.MiddleRightLabel.Name = "MiddleRightLabel";
             this.MiddleRightLabel.Size = new System.Drawing.Size(254, 118);
-            this.MiddleRightLabel.TabIndex = 14;
+            this.MiddleRightLabel.TabIndex = 19;
             this.MiddleRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.MiddleRightLabel.UseMnemonic = false;
             this.MiddleRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -255,7 +229,7 @@
             this.centerMiddleLabel.Location = new System.Drawing.Point(3, 25);
             this.centerMiddleLabel.Name = "centerMiddleLabel";
             this.centerMiddleLabel.Size = new System.Drawing.Size(254, 118);
-            this.centerMiddleLabel.TabIndex = 14;
+            this.centerMiddleLabel.TabIndex = 18;
             this.centerMiddleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.centerMiddleLabel.UseMnemonic = false;
             this.centerMiddleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -280,7 +254,7 @@
             this.bottomMiddleLabel.Location = new System.Drawing.Point(3, 14);
             this.bottomMiddleLabel.Name = "bottomMiddleLabel";
             this.bottomMiddleLabel.Size = new System.Drawing.Size(254, 129);
-            this.bottomMiddleLabel.TabIndex = 14;
+            this.bottomMiddleLabel.TabIndex = 21;
             this.bottomMiddleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bottomMiddleLabel.UseMnemonic = false;
             this.bottomMiddleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -305,7 +279,7 @@
             this.bottomLeftLabel.Location = new System.Drawing.Point(3, 14);
             this.bottomLeftLabel.Name = "bottomLeftLabel";
             this.bottomLeftLabel.Size = new System.Drawing.Size(254, 129);
-            this.bottomLeftLabel.TabIndex = 14;
+            this.bottomLeftLabel.TabIndex = 20;
             this.bottomLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bottomLeftLabel.UseMnemonic = false;
             this.bottomLeftLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -330,7 +304,7 @@
             this.centerLeftLabel.Location = new System.Drawing.Point(3, 25);
             this.centerLeftLabel.Name = "centerLeftLabel";
             this.centerLeftLabel.Size = new System.Drawing.Size(254, 118);
-            this.centerLeftLabel.TabIndex = 14;
+            this.centerLeftLabel.TabIndex = 17;
             this.centerLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.centerLeftLabel.UseMnemonic = false;
             this.centerLeftLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -355,7 +329,7 @@
             this.topRightLabel.Location = new System.Drawing.Point(3, 23);
             this.topRightLabel.Name = "topRightLabel";
             this.topRightLabel.Size = new System.Drawing.Size(254, 120);
-            this.topRightLabel.TabIndex = 14;
+            this.topRightLabel.TabIndex = 16;
             this.topRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.topRightLabel.UseMnemonic = false;
             this.topRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -394,7 +368,7 @@
             this.topCenterPanel.Location = new System.Drawing.Point(273, 3);
             this.topCenterPanel.Name = "topCenterPanel";
             this.topCenterPanel.Size = new System.Drawing.Size(260, 144);
-            this.topCenterPanel.TabIndex = 0;
+            this.topCenterPanel.TabIndex = 1;
             this.topCenterPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
             this.topCenterPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
             // 
@@ -405,7 +379,7 @@
             this.topMiddleLabel.Location = new System.Drawing.Point(3, 23);
             this.topMiddleLabel.Name = "topMiddleLabel";
             this.topMiddleLabel.Size = new System.Drawing.Size(254, 120);
-            this.topMiddleLabel.TabIndex = 14;
+            this.topMiddleLabel.TabIndex = 15;
             this.topMiddleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.topMiddleLabel.UseMnemonic = false;
             this.topMiddleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
@@ -479,7 +453,6 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1.Size = new System.Drawing.Size(223, 142);
             this.textBox1.TabIndex = 12;
-            this.textBox1.ContextMenuStripChanged += new System.EventHandler(this.textBox1_ContextMenuStripChanged);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // musicPanel
@@ -572,7 +545,7 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveButton.Location = new System.Drawing.Point(135, 12);
+            this.saveButton.Location = new System.Drawing.Point(208, 12);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(164, 60);
             this.saveButton.TabIndex = 3;
@@ -583,7 +556,7 @@
             // openProjektButton
             // 
             this.openProjektButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.openProjektButton.Location = new System.Drawing.Point(517, 12);
+            this.openProjektButton.Location = new System.Drawing.Point(488, 12);
             this.openProjektButton.Name = "openProjektButton";
             this.openProjektButton.Size = new System.Drawing.Size(170, 60);
             this.openProjektButton.TabIndex = 4;
@@ -686,22 +659,11 @@
             // 
             this.dataColumn2.ColumnName = "SettingValue";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(327, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 60);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Сохранить проектом";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 725);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.volumeScroll);
             this.Controls.Add(this.stopButton);
@@ -781,9 +743,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem настроитьТекстToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настроитьТекстToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem картинкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem увеличитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem уменьшитьToolStripMenuItem;
         public System.Windows.Forms.TextBox textBox1;
         private System.Data.DataSet dataSet1;
         private System.Data.DataTable dataTable1;
@@ -798,7 +757,6 @@
         private System.Windows.Forms.Label centerLeftLabel;
         private System.Windows.Forms.Label topRightLabel;
         private System.Windows.Forms.Label topMiddleLabel;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem add;
         private System.Windows.Forms.ToolStripMenuItem del;
     }

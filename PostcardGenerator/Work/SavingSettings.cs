@@ -9,10 +9,13 @@ namespace PostcardGenerator.Work
 {
     class SavingSettings
     {
+        public string ElementName { get; set; }
         public string SettingName { get; set; }
         public string SettingValue { get; set; }
+        public Font Font { get; set; }
+        public Color Color { get; set; }
 
-        public object SettingImage { get; set; }
+        public byte[] SettingImage { get; set; }
 
     }
 }

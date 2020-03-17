@@ -35,7 +35,7 @@ namespace PostcardGenerator.Work
             {
                 List<string> imageFormats = new List<string> { "png", "jpg", "jpeg", "gif" };
                 List<string> musicFormats = new List<string> { "mp3", "avi", "wav", "mp4" };
-
+                var a = (string[])e.Data.GetData(DataFormats.FileDrop);
                 foreach (var path in (string[])e.Data.GetData(DataFormats.FileDrop))
                 {
                     string format = path.Split('.')[path.Split('.').Count() - 1];
@@ -77,6 +77,8 @@ namespace PostcardGenerator.Work
 
         public void TextFormat(Label sender, bool pressed)
         {
+            sender.ForeColor = TextSettings.color;
+            sender.Font = TextSettings.font;
             if (pressed)          
                 sender.Text = textBox.Text;
             else
