@@ -13,7 +13,7 @@ namespace PostcardGenerator
 {
     public partial class Generator : Form
     {
-        System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+        MemoryStream memoryStream = new MemoryStream();
         GeneratorEvents events;
 
         public Generator()
@@ -61,12 +61,7 @@ namespace PostcardGenerator
             }
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-            searchImagesInPanels();
-            //Save();
-        }
-
+        private void saveButton_Click(object sender, EventArgs e) => saveSettings();
 
         private byte[] convertToByteArray(Image image)
         {
@@ -77,7 +72,7 @@ namespace PostcardGenerator
             return b;
         }
 
-        public void searchImagesInPanels()
+        public void saveSettings()
         {
             Image mainImage = postcardPanel.BackgroundImage;
             mainImage = ResizeImage(mainImage, postcardPanel.Width, postcardPanel.Height);
@@ -160,7 +155,23 @@ namespace PostcardGenerator
         }
 
 
-        private void openProjektButton_Click(object sender, EventArgs e)
+        private void openProjektButton_Click(object sender, EventArgs e) => openSettings();
+
+
+        private void Generator_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+           
+        }
+
+        private void openSettings()
         {
 
             OpenFileDialog ofd = new OpenFileDialog();
@@ -209,25 +220,9 @@ namespace PostcardGenerator
 
                 }
             }
-
-            
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+        private void button2_Click_1(object sender, EventArgs e) => Close();
 
-        }
-
-        private void Generator_MouseDown(object sender, MouseEventArgs e)
-        {
-            base.Capture = false;
-            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            this.WndProc(ref m);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

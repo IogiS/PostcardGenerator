@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using System.Media;
-using System.Windows.Media;
-using Color = System.Drawing.Color;
 
 namespace PostcardGenerator.Work
 {
@@ -114,6 +111,9 @@ namespace PostcardGenerator.Work
             textSetting.Show();
         }
 
-        
+        public void CloseForm(Form g)
+        {
+            CloseForm(g);
+        }
     }
 }

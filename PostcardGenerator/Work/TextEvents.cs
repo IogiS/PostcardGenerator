@@ -87,5 +87,10 @@ namespace PostcardGenerator.Work
             TextSettings.changed = true;
 
         }
+
+        public void CloseForm(Form g)
+        {
+            CloseForm(g);
+        }
     }
 }

@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.postcardPanel = new System.Windows.Forms.Panel();
-            this.bottomRightPanel = new System.Windows.Forms.Panel();
-            this.bottomRightLabel = new System.Windows.Forms.Label();
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.настроитьТекстToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настроитьТекстToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.add = new System.Windows.Forms.ToolStripMenuItem();
             this.del = new System.Windows.Forms.ToolStripMenuItem();
+            this.bottomRightPanel = new System.Windows.Forms.Panel();
+            this.bottomRightLabel = new System.Windows.Forms.Label();
             this.centerRightPanel = new System.Windows.Forms.Panel();
             this.MiddleRightLabel = new System.Windows.Forms.Label();
             this.midleCenterPanel = new System.Windows.Forms.Panel();
@@ -84,8 +84,8 @@
             this.playButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.postcardPanel.SuspendLayout();
-            this.bottomRightPanel.SuspendLayout();
             this.contextMenu.SuspendLayout();
+            this.bottomRightPanel.SuspendLayout();
             this.centerRightPanel.SuspendLayout();
             this.midleCenterPanel.SuspendLayout();
             this.bottomCenterPanel.SuspendLayout();
@@ -122,31 +122,6 @@
             this.postcardPanel.Name = "postcardPanel";
             this.postcardPanel.Size = new System.Drawing.Size(808, 457);
             this.postcardPanel.TabIndex = 0;
-            // 
-            // bottomRightPanel
-            // 
-            this.bottomRightPanel.AllowDrop = true;
-            this.bottomRightPanel.BackColor = System.Drawing.Color.Transparent;
-            this.bottomRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bottomRightPanel.Controls.Add(this.bottomRightLabel);
-            this.bottomRightPanel.Location = new System.Drawing.Point(543, 308);
-            this.bottomRightPanel.Name = "bottomRightPanel";
-            this.bottomRightPanel.Size = new System.Drawing.Size(260, 144);
-            this.bottomRightPanel.TabIndex = 2;
-            this.bottomRightPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
-            this.bottomRightPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
-            // 
-            // bottomRightLabel
-            // 
-            this.bottomRightLabel.ContextMenuStrip = this.contextMenu;
-            this.bottomRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bottomRightLabel.Location = new System.Drawing.Point(3, 14);
-            this.bottomRightLabel.Name = "bottomRightLabel";
-            this.bottomRightLabel.Size = new System.Drawing.Size(254, 129);
-            this.bottomRightLabel.TabIndex = 22;
-            this.bottomRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bottomRightLabel.UseMnemonic = false;
-            this.bottomRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // contextMenu
             // 
@@ -187,6 +162,31 @@
             this.del.Size = new System.Drawing.Size(163, 22);
             this.del.Text = "Удалить";
             this.del.CheckedChanged += new System.EventHandler(this.del_CheckedChanged);
+            // 
+            // bottomRightPanel
+            // 
+            this.bottomRightPanel.AllowDrop = true;
+            this.bottomRightPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bottomRightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bottomRightPanel.Controls.Add(this.bottomRightLabel);
+            this.bottomRightPanel.Location = new System.Drawing.Point(543, 308);
+            this.bottomRightPanel.Name = "bottomRightPanel";
+            this.bottomRightPanel.Size = new System.Drawing.Size(260, 144);
+            this.bottomRightPanel.TabIndex = 2;
+            this.bottomRightPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragDrop);
+            this.bottomRightPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.topRightPanel_DragEnter);
+            // 
+            // bottomRightLabel
+            // 
+            this.bottomRightLabel.ContextMenuStrip = this.contextMenu;
+            this.bottomRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bottomRightLabel.Location = new System.Drawing.Point(3, 14);
+            this.bottomRightLabel.Name = "bottomRightLabel";
+            this.bottomRightLabel.Size = new System.Drawing.Size(254, 129);
+            this.bottomRightLabel.TabIndex = 22;
+            this.bottomRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomRightLabel.UseMnemonic = false;
+            this.bottomRightLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topMiddleLabel_MouseDown);
             // 
             // centerRightPanel
             // 
@@ -452,6 +452,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.ContextMenuStrip = this.contextMenu;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.MaximumSize = new System.Drawing.Size(223, 142);
             this.textBox1.Multiline = true;
@@ -649,7 +650,6 @@
             this.button4.Size = new System.Drawing.Size(33, 33);
             this.button4.TabIndex = 13;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -663,6 +663,7 @@
             this.button2.Size = new System.Drawing.Size(33, 33);
             this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -742,8 +743,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Generator_MouseDown);
             this.postcardPanel.ResumeLayout(false);
-            this.bottomRightPanel.ResumeLayout(false);
             this.contextMenu.ResumeLayout(false);
+            this.bottomRightPanel.ResumeLayout(false);
             this.centerRightPanel.ResumeLayout(false);
             this.midleCenterPanel.ResumeLayout(false);
             this.bottomCenterPanel.ResumeLayout(false);

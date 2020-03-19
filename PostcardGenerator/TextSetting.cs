@@ -52,5 +52,8 @@ namespace PostcardGenerator
             Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
             this.WndProc(ref m);
         }
+
+        private void button2_Click(object sender, EventArgs e) => Close();
+
     }
 }
